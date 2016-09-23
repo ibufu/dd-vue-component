@@ -1,0 +1,10 @@
+.DS_STORE
+
+/dist/
+
+node_modules
+
+.vscode/
+.idea/
+
+npm-debug.log
