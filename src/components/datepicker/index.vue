@@ -4,31 +4,24 @@
             <input type="text">
             <i></i>
         </span>
-        <div>
-            <div></div>
-            <div>
-                <tabele>
-                    <thead>
-                        <th></th>
-                    </thead>
-                    <tbody>
-                        <td></td>
-                    </tbody>
-                </tabele>
-            </div>
-        </div>
+        <calendar />
     </span>
 </template>
 <style>
 
 </style>
 <script>
+    import calendar from './calendar.vue';
     export default {
+        name: 'DdDatePicker',
         props: {
             defaultValue: [String, Date],
             format: String,
             placeholder: String,
             disabledDate: Function,
+        },
+        components: {
+            calendar
         }
     }
 </script>
