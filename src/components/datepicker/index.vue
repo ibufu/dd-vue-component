@@ -24,8 +24,9 @@
 </style>
 <script>
     export default {
+        name: 'DdDatePicker',
         props: {
-            defaultValue: [String, Date]
+            defaultValue: [String, Date],
             format: String,
             placeholder: String,
             disabledDate: Function,

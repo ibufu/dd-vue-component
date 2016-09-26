@@ -24,13 +24,22 @@
 export default {
     data() {
         return {
+            data: new Date();
             WEEKS: ['一', '二', '三', '四', '五', '六', '日']
         }
     },
     computed: {
         rows() {
             const date = new Date(this.year, this.month, 1);
-            let day = data.getDay();
+            return data.getDay();
+        }
+    },
+    watch: {
+        date(newVal) {
+            if (!this.year) {
+                this.year = newVal.getFullYear();
+                this.month = newVal.getMonth();
+            }
         }
     }
 }
