@@ -2,7 +2,7 @@
     <div>
         <div></div>
         <div>
-            <tabele>
+            <table>
                 <thead>
                     <tr>
                         <th v-for="WEEK in WEEKS">{{WEEK}}</th>
@@ -13,7 +13,7 @@
                         <td v-for="day in row">{{day.getDate()}}</td>
                     </tr>
                 </tbody>
-            </tabele>
+            </table>
         </div>
     </div>
 </template>
@@ -22,16 +22,17 @@
 </style>
 <script>
 export default {
+    name: 'calendar',
     data() {
         return {
-            data: new Date();
+            date: new Date(),
             WEEKS: ['一', '二', '三', '四', '五', '六', '日']
         }
     },
     computed: {
         rows() {
             const date = new Date(this.year, this.month, 1);
-            return data.getDay();
+            return date.getDay();
         }
     },
     watch: {
