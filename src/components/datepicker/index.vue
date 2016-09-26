@@ -25,7 +25,7 @@
 <script>
     export default {
         props: {
-            defaultValue: [String, Date]
+            defaultValue: [String, Date],
             format: String,
             placeholder: String,
             disabledDate: Function,
