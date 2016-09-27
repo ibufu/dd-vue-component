@@ -2,10 +2,25 @@
 <html>
 <head>
 <meta charset='utf-8'>
+<link rel="stylesheet" href="../../node_modules/dd-common-css/dist/dd-common.min.css">
 </head>
 <body>
-    <div class="app">
-        <date-picker />
+    <div class="app" style="padding: 20px">
+        <div>
+            <date-picker placeholder="请输入日期" />
+        </div>
+        <br>
+        <br>
+        <h4>默认时间2016-01-01</h4>
+        <div>
+            <date-picker placeholder="请输入日期" v-model="value" />
+        </div>
+        <div><span>当前选中的时间：<span v-text="value"></span></span> <button class="dd-btn dd-btn-primary" @click="changeValue">改变时间</button><button class="dd-btn dd-btn-primary" @click="changeValueAgain">改变时间</div>
+        <br>
+        <br>
+        <div>
+            <date-picker placeholder="请输入日期" disabled />
+        </div>
     </div>
 <script src="../dist/datepicker.build.js"></script>    
 </body>
