@@ -37,6 +37,12 @@ export function getDayOfMonth(month) {
     return days;
 }
 
+/**
+ * 
+ * @param {Date} month
+ * @returns {[]}
+ * @description calendar组件专用方法，返回需要渲染的月份的所有日期
+ */
 export function getRows(month) {
     const rows = [];
     let week = [];
@@ -45,15 +51,15 @@ export function getRows(month) {
 
     const addWeek = (item) => {
         const emptyDays = 7 - week.length;
-        const nextMonthDayCount = rows.length
-            ? getDayCountInMonth(new Date(month.getFullYear(), month.getMonth() + 1, 1))
-            : 0;
+        const prevMonthDayCount = rows.length
+            ? 0
+            : getDayCountInMonth(new Date(month.getFullYear(), month.getMonth() - 1, 1));
 
         for (let i = 0; i < emptyDays; ++i) {
             if (rows.length) {
                 item.push(new Date(month.getFullYear(), month.getMonth() + 1, i + 1));
             } else {
-                item.unshift(new Date(month.getFullYear(), month.getMonth() - 1, nextMonthDayCount - i))
+                item.unshift(new Date(month.getFullYear(), month.getMonth() - 1, prevMonthDayCount - i))
             }
         }
 
@@ -74,4 +80,26 @@ export function getRows(month) {
     });
 
     return rows;
+}
+
+/**
+ * @param {Date} date
+ * @returns
+ * @description Date型转化为 yyyy-mm-dd
+ */
+export function formatDate(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${year}-${month < 10 ? '0' + month : month }-${day < 10 ? '0' + day : day}`;
+}
+
+/**
+ * @param {any} date1
+ * @param {any} date2
+ * @returns
+ * @description 判断两个日期是否是同一天
+ */
+export function isSameDate(date1, date2) {
+    return formatDate(date1) === formatDate(date2);
 }

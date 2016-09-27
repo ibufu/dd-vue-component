@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
 
@@ -24,33 +25,52 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue',
-                include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/vux/src')]
             },
+
             {
                 test: /\.js$/,
                 loader: 'babel',
-                include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/vux/src')]
+                exclude: /node_modules/
             },
+
             { 
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass'],
                 include: path.join(__dirname, 'src')
             },
+
             {
                 test: /\.css$/,
                 loaders: ['style', 'css']
+            },
+
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=8192'
             }
         ]
     },
 
     plugins: [
 
+        new webpack.LoaderOptionsPlugin({
+            vue: {
+                  postcss: [
+                    autoprefixer({
+                        browsers: ['last 7 versions']
+                    })
+                ]
+            }
+        }),
+
         new webpack.DefinePlugin({
             'process.env': {
                 ENV: JSON.stringify('development'),
                 NODE_ENV: JSON.stringify('development')
             }
-        })
+        }),
+
+
     ],
 
     devServer: {
