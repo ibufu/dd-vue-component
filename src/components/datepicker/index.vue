@@ -8,7 +8,6 @@
                 type="text"
                 @focus="handleFocus"
                 @keyup="handleKeyup"
-                
                 v-model="dateStr" />
             <i @click="handleClickCalendarIcon" class="dd-datepicker-calendar-icon" :class="{disabled: disabled}"></i>
         </span>
@@ -46,7 +45,6 @@
 
         props: {
             disabled: Boolean,
-            defaultValue: [String, Date],
             placeholder: String,
             disabledDate: Function,
             value: {},

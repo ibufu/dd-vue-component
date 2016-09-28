@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link rel="stylesheet" href="../../node_modules/dd-common-css/dist/dd-common.min.css">
+</head>
+<body>
+    <div class="app" style="padding: 20px;">
+        <div style="width: 200px;">
+            <dd-select v-model="value">
+                <dd-option v-for="option in options" :value="option.value" :label="option.label">
+                </dd-option>
+            </dd-select>
+        </div>
+        <p>当前选中的value<span v-text="value"></span></p>
+        <div style="width: 200px;">
+            <dd-select disabled>
+                <dd-option v-for="option in options2" :value="option.value" :label="option.label">
+                </dd-option>
+            </dd-select>
+        </div>
+        <br>
+        <br>
+        <div style="width: 200px;">
+            <dd-select placeholder="请选择性别">
+                <dd-option v-for="option in options2" :value="option.value" :label="option.label">
+                </dd-option>
+            </dd-select>
+        </div>
+    </div>
+<script src="../dist/select.build.js"></script>    
+</body>
+</html>

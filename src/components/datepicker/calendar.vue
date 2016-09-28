@@ -41,7 +41,7 @@
         padding: 8px;
         box-shadow:0px 0px 5px 0px rgba(0,0,0,0.15);
         border-radius:2px;
-        z-index: 10;
+        z-index: $zindex-popover;
     }
     .dd-datepicker-header {
         margin: 8px 0;
