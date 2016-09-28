@@ -41,7 +41,7 @@
         padding: 8px;
         box-shadow:0px 0px 5px 0px rgba(0,0,0,0.15);
         border-radius:2px;
-        z-index: 10;
+        z-index: $zindex-popover;
     }
     .dd-datepicker-header {
         margin: 8px 0;
@@ -145,7 +145,8 @@ export default {
     methods: {
         selectDate(day) {
             this.date = day;
-            
+            // select这个事件是用来关闭日历的，因为用户有可能通过输入框更改时间
+            this.$emit('select');
         },
 
         changeYear(year) {
@@ -198,7 +199,7 @@ export default {
         date(newVal) {
             this.year = newVal.getFullYear();
             this.month = newVal.getMonth();
-            this.$emit('selectDate', this.date);
+            this.$emit('changeDate', this.date);
         },
 
         defaultValue(newVal) {
@@ -213,7 +214,7 @@ export default {
         }
 
         if (this.defaultValue) {
-            this.$emit('selectDate', this.date);
+            this.$emit('changeDate', this.date);
         }
     },
 }

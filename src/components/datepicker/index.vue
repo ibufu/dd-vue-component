@@ -7,10 +7,11 @@
                 class="dd-input"
                 type="text"
                 @focus="handleFocus"
-                v-model.lazy="dateStr" />
+                @keyup="handleKeyup"
+                v-model="dateStr" />
             <i @click="handleClickCalendarIcon" class="dd-datepicker-calendar-icon" :class="{disabled: disabled}"></i>
         </span>
-        <calendar v-show="calendarVisible" v-on:selectDate="handleSelectDate" :default-value="value" />
+        <calendar v-show="calendarVisible" v-on:select="handleSelect" v-on:changeDate="handleChangeDate" :default-value="value" />
     </span>
 </template>
 <style lang="sass">
@@ -44,7 +45,6 @@
 
         props: {
             disabled: Boolean,
-            defaultValue: [String, Date],
             placeholder: String,
             disabledDate: Function,
             value: {},
@@ -86,9 +86,12 @@
                 this.$emit('blur', this);
             },
 
-            handleSelectDate(date) {
-                this.date = date;
+            handleSelect() {
                 this.hideCalendar();
+            },
+
+            handleChangeDate(date) {
+                this.date = date;
             },
 
             toggleCalendar() {
@@ -104,6 +107,13 @@
                     return
                 }
                 this.toggleCalendar();
+            },
+
+            handleKeyup() {
+                if (/\d{4}-\d{2}-\d{2}/.test(this.dateStr)) {
+                    const str = this.dateStr.split('-');
+                    this.date = new Date(str[0], str[1] - 1, str[2]);
+                }
             }
         },
 

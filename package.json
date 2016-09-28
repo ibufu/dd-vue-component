@@ -9,7 +9,7 @@
   "author": "morning",
   "license": "MIT",
   "dependencies": {
-    "dd-common-css": "0.0.2",
+    "dd-common-css": "0.1.0",
     "vue": "^2.0.0-rc.7"
   },
   "devDependencies": {
