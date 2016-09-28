@@ -7,7 +7,8 @@ module.exports = {
     devtool: 'inline-source-map',
 
     entry: {
-        'datepicker': './examples/datepicker/index.js'
+        'datepicker': './examples/datepicker/index.js',
+        'pagination': './examples/pagination/index.js'
     },
 
     output: {
