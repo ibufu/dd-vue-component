@@ -8,7 +8,8 @@ module.exports = {
 
     entry: {
         'datepicker': './examples/datepicker/index.js',
-        'select': './examples/select'
+        'select': './examples/select',
+        'pagination': './examples/pagination/index.js'
     },
 
     output: {
