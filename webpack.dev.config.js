@@ -8,7 +8,8 @@ module.exports = {
 
     entry: {
         'datepicker': './examples/datepicker/index.js',
-        'select': './examples/select'
+        'select': './examples/select',
+        'tree': './examples/tree',
     },
 
     output: {
@@ -18,7 +19,7 @@ module.exports = {
     
     resolve: {
         extensions: ['.js', '.vue'],
-         alias: {vue: 'vue/dist/vue.js'}
+        alias: {vue: 'vue/dist/vue.js'}
     },
     
     module: {

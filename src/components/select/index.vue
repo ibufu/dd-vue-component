@@ -76,7 +76,11 @@
                 type: Boolean,
                 default: false
             },
-            placeholder: String
+            placeholder: String,
+            multiple: {
+                type: Boolean,
+                default: false
+            }
         },
 
         watch: {
@@ -103,7 +107,7 @@
                 if (isChild) {
                     this.selectedLabel = option.label;
                     this.$emit('input', option.value);
-                    this.hideMenu();
+                    !this.multiple && this.hideMenu();
                 }
             }
         },
