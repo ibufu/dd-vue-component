@@ -44,8 +44,7 @@
             },
 
             handleSelect(option) {
-                if (this.multiple) {
-                } else {
+                if (!this.multiple) {
                     this.current = this === option;
                 }
             },

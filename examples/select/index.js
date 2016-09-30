@@ -31,7 +31,7 @@ new Vue ({
                 label: '女'
             }],
             value: null,
-            multipleValue: null
+            multipleValue: ['0']
         }
     },
     methods: {

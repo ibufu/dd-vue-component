@@ -68,6 +68,7 @@
                 menuVisible: false,
                 selectedLabel: '',
                 selectedOptions: [],
+                changedBySelect: false,
             }
         },
 
@@ -86,11 +87,10 @@
 
         watch: {
             value(newVal, oldVal) {
-                // const val1 = [...newVal];
-                // const val2 = [...oldVal];
-                // if (val1.sort().toString() === val2.sort().toString()) {
-                //     return
-                // }
+                if (this.changedBySelect) {
+                    this.changedBySelect = false;
+                    return
+                }
                 bus.$emit('change', this);
             }
         },
@@ -116,19 +116,12 @@
             handleSelect(option) {
                 // every select will trigger in bus pattern
                 const isChild = this.$children.some(el => el === option);
+                this.changedBySelect = true;
                 if (!isChild) {
                     return
                 }
                     
                 if (this.multiple) {
-                    if (this.value) {
-                        const val1 = [...this.value];
-                        const val2 = [...this.selectedValue];
-                        if (val1.sort().toString() === val2.sort().toString()) {
-                            return
-                        }
-                    }
-                    
                     if (this.selectedValue.indexOf(option.value) > -1) {
                         this.selectedOptions = this.selectedOptions.filter(el => el.value !== option.value);
                         option.current = false;
@@ -138,7 +131,7 @@
                     }
 
                     this.selectedLabel = this.selectedOptions.map(el => el.label).join('、');
-                    this.$emit('input', this.selectedOptions.map(el => el.value));
+                    this.$emit('input', this.selectedValue);
                 } else {
                     this.selectedLabel = option.label;
                     this.$emit('input', option.value);
