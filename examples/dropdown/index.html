@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="../../node_modules/dd-common-css/dist/dd-common.min.css">
+</head>
+<body>
+<div class="app" style="padding: 20px">
+    <div style="width: 100px; display: inline-block; margin-left: 20px;">
+        <dd-dropdown text="导出明细" trigger="click" :disable="true">
+            <dd-item><span @click="showText">导出PDF</span></dd-item>
+            <dd-item><span @click="showText">导出Excel</span></dd-item>
+        </dd-dropdown>
+    </div>
+    <div style="width: 100px; display: inline-block; margin-left: 20px;">
+        <dd-dropdown text="导出明细" trigger="hover" :disable="false">
+            <dd-item><span @click="showText">导出PDF</span></dd-item>
+            <dd-item><span @click="showText">导出Excel</span></dd-item>
+        </dd-dropdown>
+    </div>
+    <div style="width: 100px; display: inline-block; margin-left: 20px;">
+        <dd-dropdown text="导出明细" trigger="click" :disable="false">
+            <dd-item><span @click="showText">导出PDF</span></dd-item>
+            <dd-item><span @click="showText">导出Excel</span></dd-item>
+        </dd-dropdown>
+    </div>
+    <div style="width: 100px; display: inline-block; margin-left: 20px;">
+        <dd-dropdown text="导出明细" trigger="click" :disable="true">
+            <dd-item><span @click="showText">导出PDF</span></dd-item>
+            <dd-item><span @click="showText">导出Excel</span></dd-item>
+        </dd-dropdown>
+    </div>
+</div>
+<script src="../dist/dropdown.build.js"></script>
+</body>
+</html>
