@@ -2,6 +2,7 @@
     <li class="dd-select-option"
         :class="{'dd-select-option-selected': current}"
         @click="handleClick">
+        <input type="checkbox" class="dd-checkbox" v-if="multiple" :checked="current">
         {{label}}
     </li>
 </template>
@@ -32,7 +33,8 @@
 
         data() {
             return {
-                current: this.selected
+                current: this.selected,
+                multiple: this.$parent.multiple
             }
         },
 
@@ -42,13 +44,26 @@
             },
 
             handleSelect(option) {
-                this.current = this === option;
+                if (this.multiple) {
+                } else {
+                    this.current = this === option;
+                }
             },
 
             handleChange(select) {
                 const isParent = this.$parent === select;
-                if (isParent && this.value === select.value) {
-                    bus.$emit('select', this);
+                if (!isParent) {
+                    return
+                }
+
+                if (this.multiple) {
+                    if (select.value.some(value => value === this.value)) {
+                        bus.$emit('select', this);
+                    }
+                } else {
+                    if (this.value === select.value) {
+                        bus.$emit('select', this);
+                    }
                 }
             }
         },

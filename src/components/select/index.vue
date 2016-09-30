@@ -67,6 +67,7 @@
             return {
                 menuVisible: false,
                 selectedLabel: '',
+                selectedOptions: [],
             }
         },
 
@@ -84,8 +85,19 @@
         },
 
         watch: {
-            value(newVal) {
+            value(newVal, oldVal) {
+                // const val1 = [...newVal];
+                // const val2 = [...oldVal];
+                // if (val1.sort().toString() === val2.sort().toString()) {
+                //     return
+                // }
                 bus.$emit('change', this);
+            }
+        },
+
+        computed: {
+            selectedValue() {
+                return this.selectedOptions.map(el => el.value);
             }
         },
 
@@ -104,10 +116,33 @@
             handleSelect(option) {
                 // every select will trigger in bus pattern
                 const isChild = this.$children.some(el => el === option);
-                if (isChild) {
+                if (!isChild) {
+                    return
+                }
+                    
+                if (this.multiple) {
+                    if (this.value) {
+                        const val1 = [...this.value];
+                        const val2 = [...this.selectedValue];
+                        if (val1.sort().toString() === val2.sort().toString()) {
+                            return
+                        }
+                    }
+                    
+                    if (this.selectedValue.indexOf(option.value) > -1) {
+                        this.selectedOptions = this.selectedOptions.filter(el => el.value !== option.value);
+                        option.current = false;
+                    } else {
+                        this.selectedOptions.push({ value: option.value, label: option.label });
+                        option.current = true;
+                    }
+
+                    this.selectedLabel = this.selectedOptions.map(el => el.label).join('、');
+                    this.$emit('input', this.selectedOptions.map(el => el.value));
+                } else {
                     this.selectedLabel = option.label;
                     this.$emit('input', option.value);
-                    !this.multiple && this.hideMenu();
+                    this.hideMenu();
                 }
             }
         },

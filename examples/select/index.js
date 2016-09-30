@@ -6,34 +6,32 @@ new Vue ({
     data() {
         return {
             options: [{
-                value: '选项1',
-                label: '黄金糕'
+                value: '0',
+                label: '所有房型'
             },
             {
-                value: '选项2',
-                label: '双皮奶'
+                value: '1',
+                label: '房间A'
             },
             {
-                value: '选项3',
-                label: '蚵仔煎'
+                value: '2',
+                label: '房间B'
             },
             {
-                value: '选项4',
-                label: '龙须面'
-            },
-            {
-                value: '选项5',
-                label: '北京烤鸭'
-            }],
+                value: '3',
+                label: '房间B'
+            }
+            ],
              options2: [{
-                value: '选项1',
+                value: 'male',
                 label: '男'
             },
             {
-                value: '选项2',
+                value: 'female',
                 label: '女'
             }],
-            value: '选项1'
+            value: null,
+            multipleValue: null
         }
     },
     methods: {
