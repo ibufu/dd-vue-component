@@ -67,6 +67,8 @@
             return {
                 menuVisible: false,
                 selectedLabel: '',
+                selectedOptions: [],
+                changedBySelect: false,
             }
         },
 
@@ -84,8 +86,18 @@
         },
 
         watch: {
-            value(newVal) {
+            value(newVal, oldVal) {
+                if (this.changedBySelect) {
+                    this.changedBySelect = false;
+                    return
+                }
                 bus.$emit('change', this);
+            }
+        },
+
+        computed: {
+            selectedValue() {
+                return this.selectedOptions.map(el => el.value);
             }
         },
 
@@ -104,10 +116,26 @@
             handleSelect(option) {
                 // every select will trigger in bus pattern
                 const isChild = this.$children.some(el => el === option);
-                if (isChild) {
+                this.changedBySelect = true;
+                if (!isChild) {
+                    return
+                }
+                    
+                if (this.multiple) {
+                    if (this.selectedValue.indexOf(option.value) > -1) {
+                        this.selectedOptions = this.selectedOptions.filter(el => el.value !== option.value);
+                        option.current = false;
+                    } else {
+                        this.selectedOptions.push({ value: option.value, label: option.label });
+                        option.current = true;
+                    }
+
+                    this.selectedLabel = this.selectedOptions.map(el => el.label).join('、');
+                    this.$emit('input', this.selectedValue);
+                } else {
                     this.selectedLabel = option.label;
                     this.$emit('input', option.value);
-                    !this.multiple && this.hideMenu();
+                    this.hideMenu();
                 }
             }
         },

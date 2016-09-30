@@ -27,6 +27,15 @@
                 </dd-option>
             </dd-select>
         </div>
+        <br>
+        <br>
+        <div style="width: 200px;">
+            <dd-select multiple v-model="multipleValue">
+                <dd-option v-for="option in options" :value="option.value" :label="option.label">
+                </dd-option>
+            </dd-select>
+        </div>
+        <p>当前选中的value<span v-text="multipleValue"></span></p>
     </div>
 <script src="../dist/select.build.js"></script>    
 </body>
