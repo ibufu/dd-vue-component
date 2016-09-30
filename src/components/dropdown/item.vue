@@ -1,9 +1,9 @@
 <template>
-    <li @click="handleClick"><slot></slot></li>
+    <li @click="handleClick" class="dd-dropdown-item"><slot></slot></li>
 </template>
 <style rel="stylesheet/scss" lang="sass" type="text/css">
     @import '../../../node_modules/dd-common-css/src/variables';
-    li {
+    .dd-dropdown-item {
         font-size: $font-size-sm;
         padding-left: 4px;
         height: 24px;

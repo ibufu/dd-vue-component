@@ -8,7 +8,7 @@
 <style rel="stylesheet/scss" type="text/css" lang="sass">
     @import "../../../node_modules/dd-common-css/src/variables";
 
-    ul.dd-pager {
+    .dd-pager {
         list-style: none;
         display: inline-block;
         vertical-align: top;

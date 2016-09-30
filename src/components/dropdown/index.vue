@@ -2,10 +2,10 @@
 <div @mouseenter="handleMouseEnter"
      @mouseleave="handleMouseLeave"
      v-clickoutside="hide"
-     :class="['dropdown_container',{ disable: this.disable }]">
-    <div :class="['dd-btn-menu', { menu_disable: this.disable }]"
+     :class="['dd-dropdown-container',{ disable: this.disable }]">
+    <div :class="['dd-btn-primary', 'dd-btn', { disabled: this.disable }]"
          @click="handleClick">
-        <span :class="{ disable: this.disable }">{{ text }}</span><img src="./images/menu_arrow.png" alt="" :class="{ disable: this.disable}">
+        <span :class="{ disable: this.disable }">{{ text }}</span><img src="./images/menu_arrow.png" alt="" :class="['dd-dropdown-arrow' ,{ disable: this.disable}]">
     </div>
     <dd-menu v-if="visible">
         <slot></slot>
@@ -14,28 +14,12 @@
 </template>
 <style rel="stylesheet/scss" type="text/css" lang="sass">
     @import '../../../node_modules/dd-common-css/src/variables';
-
-    .dd-btn-menu {
-        width: 100%;
-        background: $blue;
-        border-radius: $border-radius;
-        font-size: $font-size-base;
-        height: 24px;
-        line-height: 24px;
-        text-align: center;
-        color: $body-bg;
-        cursor: pointer;
-        img {
-            margin-left: 8px;
-            vertical-align: middle;
-        }
-    }
-    .menu_disable {
-        cursor: not-allowed;
-        background: $gary;
-    }
-    .dropdown_container {
+    .dd-dropdown-container {
         position: relative;
+    }
+    .dd-dropdown-arrow {
+        margin-left: 8px;
+        vertical-align: middle;
     }
 </style>
 <script>

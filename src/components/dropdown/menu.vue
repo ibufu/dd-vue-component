@@ -1,11 +1,11 @@
 <template>
-    <ul>
+    <ul class="dd-dropdown-menu">
         <slot></slot>
     </ul>
 </template>
 <style rel="stylesheet/scss" type="text/css" lang="sass">
     @import '../../../node_modules/dd-common-css/src/variables';
-    ul {
+    .dd-dropdown-menu {
         padding: 0;
         margin: 4px 0 0 0;
         font-size: 0;
