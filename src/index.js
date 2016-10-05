@@ -1,9 +1,9 @@
-import DdDatepicker from './components/datepicker';
-import DdPagination from './components/pagination';
-import DdSelect from './components/select';
-import DdOption from './components/select/option';
-import DdDropdown from './components/dropdown';
-import DdDropdownItem from './components/dropdown/item';
+var DdDatepicker = require('./components/datepicker');
+var DdPagination = require('./components/pagination');
+var DdSelect = require('./components/select');
+var DdOption  = require('./components/select/option');
+var DdDropdown = require('./components/dropdown');
+var DdDropdownItem = require('./components/dropdown/item');
 
 module.export = {
     DdDatepicker,
