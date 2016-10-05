@@ -7,7 +7,7 @@
     </li>
 </template>
 <style lang="sass">
-    @import"../../../node_modules/dd-common-css/src/variables";
+    @import"~dd-common-css/src/variables";
     .dd-select-option {
         font-size: 12px;
         padding-left: 4px;

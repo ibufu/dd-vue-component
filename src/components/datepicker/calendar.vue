@@ -31,7 +31,7 @@
     </div>
 </template>
 <style  lang="sass" scoped>
-    @import"../../../node_modules/dd-common-css/src/variables";
+    @import"~dd-common-css/src/variables";
     .dd-datepicker-calendar {
         background: #fff;
         position: absolute;

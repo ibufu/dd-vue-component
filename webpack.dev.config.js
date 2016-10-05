@@ -3,7 +3,6 @@ var path = require('path');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-
     devtool: 'inline-source-map',
 
     entry: {
@@ -20,7 +19,7 @@ module.exports = {
     
     resolve: {
         extensions: ['.js', '.vue'],
-         alias: {vue: 'vue/dist/vue.js'}
+        alias: {vue: 'vue/dist/vue.js'}
     },
     
     module: {
@@ -55,7 +54,6 @@ module.exports = {
     },
 
     plugins: [
-
         new webpack.LoaderOptionsPlugin({
             vue: {
                   postcss: [

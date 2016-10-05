@@ -2,7 +2,7 @@
   "name": "dd-vue-component",
   "version": "0.1.0",
   "description": "dingdanlaile vue components library",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "webpack --config webpack.dev.config.js --watch",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",

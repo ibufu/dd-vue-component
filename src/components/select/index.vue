@@ -18,7 +18,7 @@
     </div>
 </template>
 <style lang="sass">
-    @import"../../../node_modules/dd-common-css/src/variables";
+    @import"~dd-common-css/src/variables";
     .dd-select {
         position: relative;
     }

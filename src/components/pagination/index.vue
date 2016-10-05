@@ -30,7 +30,7 @@
     </div>
 </template>
 <style rel="stylesheet/scss" type="text/css" lang="sass">
-    @import '../../../node_modules/dd-common-css/src/variables';
+    @import '~dd-common-css/src/variables';
 
     .dd-pagination {
         font-size: 0;
