@@ -1,12 +1,12 @@
 <template>
     <div class="dd-pagination" v-if="pageCount > 1 || showOnePage">
         <button
-                :class="['pagination-btn-first', { pagination_disabled: this.internalCurrentPage <= 1}]"
+                :class="['dd-pagination-btn', 'pagination-btn-first', { 'dd-pagination-disabled': this.internalCurrentPage <= 1}]"
                 @click="this.goToFirstPage">
                 <span v-text="firstText"></span>
         </button>
         <button
-                :class="['pagination-btn-prev', { pagination_disabled: this.internalCurrentPage <= 1}]"
+                :class="['dd-pagination-btn', 'pagination-btn-prev', { 'dd-pagination-disabled': this.internalCurrentPage <= 1}]"
                 @click="this.getPrevPage">
                 <span>&lt;</span>
         </button>
@@ -18,12 +18,12 @@
 
         </pager>
         <button
-                :class="['pagination-btn-next', { pagination_disabled: this.internalCurrentPage === this.pageCount }]"
+                :class="['dd-pagination-btn', 'pagination-btn-next', { 'dd-pagination-disabled': this.internalCurrentPage === this.pageCount }]"
                 @click="this.getNextPage">
                 <span>&gt;</span>
         </button>
         <button
-                :class="['pagination-btn-first', { pagination_disabled: this.internalCurrentPage === this.pageCount }]"
+                :class="['dd-pagination-btn', 'pagination-btn-first', { 'dd-pagination-disabled': this.internalCurrentPage === this.pageCount }]"
                 @click="this.goToLastPage">
                 <span v-text="lastText"></span>
         </button>
@@ -34,30 +34,30 @@
 
     .dd-pagination {
         font-size: 0;
-        button, li {
-            padding: 0 4px;
-            border: 1px solid $gary;
-            display: inline-block;
-            border-radius: $border-radius;
-            font-size: $font-size-sm;
-            color: $gary-dark;
-            height: 24px;
-            line-height: 24px;
-            min-width: 24px;
-            cursor: pointer;
-            background: transparent;
-            outline: none;
-            text-align: center;
-            vertical-align: top;
-            &:not(:last-child) {
-                margin-right: 8px;
-            }
+    }
+    .dd-pagination-btn, .dd-pager-item {
+        padding: 0 4px;
+        border: 1px solid $gary;
+        display: inline-block;
+        border-radius: $border-radius;
+        font-size: $font-size-sm;
+        color: $gary-dark;
+        height: 24px;
+        line-height: 24px;
+        min-width: 24px;
+        cursor: pointer;
+        background: transparent;
+        outline: none;
+        text-align: center;
+        vertical-align: top;
+        &:not(:last-child) {
+            margin-right: 8px;
         }
-        .pagination_disabled {
-            color: $gary;
-            border: 1px solid $gary-light;
-            cursor: not-allowed;
-        }
+    }
+    .dd-pagination-disabled {
+        color: $gary;
+        border: 1px solid $gary-light;
+        cursor: not-allowed;
     }
 </style>
 <script>

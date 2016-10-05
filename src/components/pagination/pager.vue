@@ -1,30 +1,30 @@
 <template>
     <ul class="dd-pager" @click="onPagerClick">
-        <li class="more btn-quickprev" v-if="showPrevMore">...</li>
-        <li v-for="pager in pagers" :class="{ pager_active: currentPage === pager }">{{ pager }}</li>
-        <li class="more btn-quicknext" v-if="showNextMore">...</li>
+        <li class="dd-pager-more dd-btn-quickprev dd-pager-item" v-if="showPrevMore">...</li>
+        <li v-for="pager in pagers" :class="['dd-pager-item', { 'dd-pager-active': currentPage === pager }]">{{ pager }}</li>
+        <li class="dd-pager-more dd-btn-quicknext dd-pager-item" v-if="showNextMore">...</li>
     </ul>
 </template>
 <style rel="stylesheet/scss" type="text/css" lang="sass">
     @import "~dd-common-css/src/variables";
 
-    ul.dd-pager {
+    .dd-pager {
         list-style: none;
         display: inline-block;
         vertical-align: top;
         padding: 0;
         font-size: 0;
-        li {
-            margin-right: 8px;
-        }
-        .more {
-            border: none;
-        }
-        .pager_active {
-            border: 1px solid $blue;
-            background: rgba($blue-light, .1);
-            color: $blue;
-        }
+    }
+    .dd-pager-item {
+        margin-right: 8px;
+    }
+    .dd-pager-more {
+        border: none;
+    }
+    .dd-pager-active {
+        border: 1px solid $blue;
+        background: rgba($blue-light, .1);
+        color: $blue;
     }
 </style>
 <script>

@@ -9,7 +9,8 @@ module.exports = {
         'datepicker': './examples/datepicker/index.js',
         'select': './examples/select',
         'pagination': './examples/pagination/index.js',
-        'tree': './examples/tree'
+        'tree': './examples/tree',
+        'dropdown': './examples/dropdown'
     },
 
     output: {
