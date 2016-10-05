@@ -1,3 +1,13 @@
+<a name="0.2.2"></a>
+## [0.2.2](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.1...v0.2.2) (2016-10-05)
+
+
+### Bug Fixes
+
+* add export components ([4e3ff83](http://test.eluying.com:91/frontend/dd-vue-component/commits/4e3ff83))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.0...v0.2.1) (2016-10-05)
 
