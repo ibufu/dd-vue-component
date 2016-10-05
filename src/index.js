@@ -1,9 +1,11 @@
-import datepicker from './components/datepicker';
-import pagination from './components/pagination';
-import select from './components/select';
+import DdDatepicker from './components/datepicker';
+import DdPagination from './components/pagination';
+import DdSelect from './components/select';
+import DdDropdown from './components/dropdown';
 
 module.export = {
-    datepicker,
-    pagination,
-    select,
+    DdDatepicker,
+    DdPagination,
+    DdSelect,
+    DdDropdown,
 };

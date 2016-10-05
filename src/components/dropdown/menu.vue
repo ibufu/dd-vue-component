@@ -4,7 +4,7 @@
     </ul>
 </template>
 <style rel="stylesheet/scss" type="text/css" lang="sass">
-    @import '../../../node_modules/dd-common-css/src/variables';
+    @import '~dd-common-css/src/variables';
     .dd-dropdown-menu {
         padding: 0;
         margin: 4px 0 0 0;

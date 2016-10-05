@@ -2,7 +2,7 @@
     <li @click="handleClick" class="dd-dropdown-item"><slot></slot></li>
 </template>
 <style rel="stylesheet/scss" lang="sass" type="text/css">
-    @import '../../../node_modules/dd-common-css/src/variables';
+    @import '~dd-common-css/src/variables';
     .dd-dropdown-item {
         font-size: $font-size-sm;
         padding-left: 4px;
