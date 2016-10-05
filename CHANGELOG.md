@@ -1,3 +1,8 @@
+<a name="0.2.1"></a>
+## [0.2.1](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.0...v0.2.1) (2016-10-05)
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/1f88fa7...v0.2.0) (2016-09-30)
 
