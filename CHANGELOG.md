@@ -1,3 +1,13 @@
+<a name="0.2.4"></a>
+## [0.2.4](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.3...v0.2.4) (2016-10-06)
+
+
+### Bug Fixes
+
+* index.js exports ([b988519](http://test.eluying.com:91/frontend/dd-vue-component/commits/b988519))
+
+
+
 <a name="0.2.3"></a>
 ## [0.2.3](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.2...v0.2.3) (2016-10-05)
 
