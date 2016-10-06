@@ -5,7 +5,7 @@ var DdOption  = require('./components/select/option');
 var DdDropdown = require('./components/dropdown');
 var DdDropdownItem = require('./components/dropdown/item');
 
-module.export = {
+module.exports = {
     DdDatepicker,
     DdPagination,
     DdSelect,
