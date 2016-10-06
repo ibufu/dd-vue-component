@@ -51,7 +51,7 @@
         font-weight: bold;
         text-align: center;
         display: inline-block;
-        margin: 0 35px;
+        margin: 0 29px;
         min-width: 64px;
     }
     .dd-datepicker-icon {
@@ -67,7 +67,7 @@
             background-image: url('images/double-left-arrow.png');
         }
         &.dd-datepicker-icon-prev-month {
-            margin-left: 24px;
+            margin-left: 16px;
             background-image: url('images/left-arrow.png');
         }
         &.dd-datepicker-icon-next-year {
@@ -75,17 +75,20 @@
 
         }
         &.dd-datepicker-icon-next-month {
-            margin-right: 24px;
+            margin-right: 16px;
             background-image: url('images/right-arrow.png');
         }
     }
     .dd-datepicker-table {
-        text-align: center;
         table-layout: fixed;
         width: 231px;
+        font-size: 14px;
+        border-spacing: 0;
+        border-collapse: collapse;
         td, th {
             width: 33px;
             height: 35px;
+            text-align: center;
         }
         th {
             color: $gary-dark;
