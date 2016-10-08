@@ -88,6 +88,9 @@ export function getRows(month) {
  * @description Date型转化为 yyyy-mm-dd
  */
 export function formatDate(date) {
+    if (!(date instanceof Date)) {
+        return date;
+    }
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();

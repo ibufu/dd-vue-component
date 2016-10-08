@@ -55,12 +55,16 @@
                 calendarVisible: false,
                 date: null,
                 dateStr: null,
+                changedByInput: false,
             }
         },
 
         watch: {
             date(newVal) {
-                this.dateStr = formatDate(newVal);
+                if (!this.changedByInput) {
+                    this.dateStr = newVal ? formatDate(newVal) : null;
+                }
+
                 this.$emit('input', this.dateStr);
             }
         },
@@ -77,6 +81,7 @@
             hideCalendar() {
                 this.calendarVisible = false;
             },
+
             handleFocus() {
                 !this.calendarVisible && this.showCalendar();
                 this.$emit('focus', this);
@@ -91,6 +96,11 @@
             },
 
             handleChangeDate(date) {
+                if (this.changedByInput) {
+                    this.changedByInput = false;
+                    return;
+                }
+                
                 this.date = date;
             },
 
@@ -106,6 +116,7 @@
                 if (this.disabled) {
                     return
                 }
+
                 this.toggleCalendar();
             },
 
@@ -114,6 +125,12 @@
                     const str = this.dateStr.split('-');
                     this.date = new Date(str[0], str[1] - 1, str[2]);
                 }
+
+                if (this.dateStr === '') {
+                    this.date = null;
+                }
+
+                this.changedByInput = true;
             }
         },
 

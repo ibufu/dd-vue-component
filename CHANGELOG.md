@@ -1,60 +1,45 @@
 <a name="0.2.5"></a>
 ## [0.2.5](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.4...v0.2.5) (2016-10-06)
-
+### Bug Fixes
+* datepick dose not change v-model when user input '' ([b38a3f5](http://test.eluying.com:91/frontend/dd-vue-component/commits/b38a3f5))
 
 
 <a name="0.2.4"></a>
 ## [0.2.4](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.3...v0.2.4) (2016-10-06)
 
 
-### Bug Fixes
-
-* index.js exports ([b988519](http://test.eluying.com:91/frontend/dd-vue-component/commits/b988519))
-
-
-
-<a name="0.2.3"></a>
-## [0.2.3](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.2...v0.2.3) (2016-10-05)
-
-
-### Bug Fixes
-
-* use commonjs at index.js ([2d2b7b5](http://test.eluying.com:91/frontend/dd-vue-component/commits/2d2b7b5))
-
-
-
-<a name="0.2.2"></a>
-## [0.2.2](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.1...v0.2.2) (2016-10-05)
 
 
 ### Bug Fixes
 
 * add export components ([4e3ff83](http://test.eluying.com:91/frontend/dd-vue-component/commits/4e3ff83))
 
+* fix style rules ([8ccfcd9](http://test.eluying.com:91/frontend/dd-vue-component/commits/8ccfcd9))
+* fix style rules of pagination component ([cbff2cb](http://test.eluying.com:91/frontend/dd-vue-component/commits/cbff2cb))
+* index.js exports ([b988519](http://test.eluying.com:91/frontend/dd-vue-component/commits/b988519))
+* select multiple ([3b499e8](http://test.eluying.com:91/frontend/dd-vue-component/commits/3b499e8))
+* use commonjs at index.js ([2d2b7b5](http://test.eluying.com:91/frontend/dd-vue-component/commits/2d2b7b5))
 
 
-<a name="0.2.1"></a>
-## [0.2.1](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.0...v0.2.1) (2016-10-05)
+### Features
+
+* add multiple select ([3b1e06e](http://test.eluying.com:91/frontend/dd-vue-component/commits/3b1e06e))
+* add new component dropdown ([c947fab](http://test.eluying.com:91/frontend/dd-vue-component/commits/c947fab))
 
 
 
-<a name="0.2.0"></a>
-# [0.2.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/1f88fa7...v0.2.0) (2016-09-30)
+<a name="0.1.0"></a>
+# [0.1.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/1f88fa7...v0.1.0) (2016-09-29)
 
 
 ### Bug Fixes
 
-* fix style rules ([8ccfcd9](http://test.eluying.com:91/frontend/dd-vue-component/commits/8ccfcd9))
-* fix style rules of pagination component ([cbff2cb](http://test.eluying.com:91/frontend/dd-vue-component/commits/cbff2cb))
 * input date can not set date ([26379a8](http://test.eluying.com:91/frontend/dd-vue-component/commits/26379a8))
-* select multiple ([3b499e8](http://test.eluying.com:91/frontend/dd-vue-component/commits/3b499e8))
 
 
 ### Features
 
 * add dd-datepicker ([3c9146e](http://test.eluying.com:91/frontend/dd-vue-component/commits/3c9146e))
-* add multiple select ([3b1e06e](http://test.eluying.com:91/frontend/dd-vue-component/commits/3b1e06e))
-* add new component dropdown ([c947fab](http://test.eluying.com:91/frontend/dd-vue-component/commits/c947fab))
 * add pagination component ([9686419](http://test.eluying.com:91/frontend/dd-vue-component/commits/9686419))
 * add select ([021dfb0](http://test.eluying.com:91/frontend/dd-vue-component/commits/021dfb0))
 * add tree ([bed9d70](http://test.eluying.com:91/frontend/dd-vue-component/commits/bed9d70))
