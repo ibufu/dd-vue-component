@@ -206,7 +206,7 @@ export default {
         },
 
         defaultValue(newVal) {
-            this.date = new Date(newVal);
+            this.date = newVal ? new Date(newVal) : new Date();
         }
     },
 
