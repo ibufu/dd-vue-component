@@ -1,19 +1,11 @@
 <a name="0.2.5"></a>
-## [0.2.5](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.4...v0.2.5) (2016-10-06)
-### Bug Fixes
-* datepick dose not change v-model when user input '' ([b38a3f5](http://test.eluying.com:91/frontend/dd-vue-component/commits/b38a3f5))
-
-
-<a name="0.2.4"></a>
-## [0.2.4](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.3...v0.2.4) (2016-10-06)
-
-
+## [0.2.5](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.1.0...v0.2.5) (2016-10-08)
 
 
 ### Bug Fixes
 
 * add export components ([4e3ff83](http://test.eluying.com:91/frontend/dd-vue-component/commits/4e3ff83))
-
+* datepick dose not change v-model when user input '' ([b38a3f5](http://test.eluying.com:91/frontend/dd-vue-component/commits/b38a3f5))
 * fix style rules ([8ccfcd9](http://test.eluying.com:91/frontend/dd-vue-component/commits/8ccfcd9))
 * fix style rules of pagination component ([cbff2cb](http://test.eluying.com:91/frontend/dd-vue-component/commits/cbff2cb))
 * index.js exports ([b988519](http://test.eluying.com:91/frontend/dd-vue-component/commits/b988519))
