@@ -1,3 +1,13 @@
+<a name="0.2.9"></a>
+## [0.2.9](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.8...v0.2.9) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** some style issues ([0de2a66](http://test.eluying.com:91/frontend/dd-vue-component/commits/0de2a66))
+
+
+
 <a name="0.2.8"></a>
 ## [0.2.8](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.7...v0.2.8) (2016-10-10)
 
