@@ -19,7 +19,7 @@ new Vue ({
             },
             {
                 value: '3',
-                label: '房间B'
+                label: '房间C'
             }
             ],
              options2: [{
@@ -31,7 +31,7 @@ new Vue ({
                 label: '女'
             }],
             value: '0',
-            multipleValue: ['0'],
+            multipleValue: ['0', '1', '2', '3'],
             provinces: [{label:'浙江省', value: '0'}, {label: '河南省', value: '1'}],
             cities: [[{label:'杭州', value: '0'}, {label: '温州', value: '1'}], [{label:'郑州', value: '0'}, {label: '开封', value: '1'}]],
             province: '0',
@@ -42,7 +42,9 @@ new Vue ({
         }
     },
     methods: {
-        
+        clear() {
+            this.multipleValue = [];
+        }
     },
     computed: {
         currentCities() {

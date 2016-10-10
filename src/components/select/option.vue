@@ -56,9 +56,7 @@
                 }
 
                 if (this.multiple) {
-                    if (select.value.some(value => value === this.value)) {
-                        bus.$emit('selectMultiple', this);
-                    }
+                    bus.$emit('selectMultiple', this);
                 } else {
                     if (this.value === select.value) {
                         bus.$emit('select', this);

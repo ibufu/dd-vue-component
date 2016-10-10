@@ -151,10 +151,10 @@
                     return
                 }
 
-                if (!this.selectedOptions.some(el => {
-                    return el.value === option.value && el.label === option.label
-                })) {
+                if (option.current) {
                     this.selectedOptions.push({ value: option.value, label: option.label });
+                } else {
+                    this.selectedOptions = this.selectedOptions.filter(el => el.value !== option.value);
                 }
             },
 
