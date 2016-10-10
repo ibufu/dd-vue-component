@@ -1,3 +1,13 @@
+<a name="0.2.7"></a>
+## [0.2.7](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.6...v0.2.7) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** select does not select option when options change ([a6f5bb6](http://test.eluying.com:91/frontend/dd-vue-component/commits/a6f5bb6))
+
+
+
 <a name="0.2.6"></a>
 ## [0.2.6](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.5...v0.2.6) (2016-10-08)
 
