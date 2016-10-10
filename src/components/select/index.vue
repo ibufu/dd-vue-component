@@ -10,8 +10,8 @@
                 @click="toggleMenu">
             <i class="dd-select-icon" @click="toggleMenu"></i>
         </span>
-        <div class="dd-select-menu">
-            <ul v-show="menuVisible">
+        <div class="dd-select-menu" v-show="menuVisible">
+            <ul>
                 <slot></slot>
             </ul>
         </div>
@@ -47,6 +47,8 @@
         width: 100%;
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
         border-radius: $border-radius;
+        overflow-x: hidden;
+        overflow-y: auto;
         ul {
             list-style: none;
             padding: 0 1px;
@@ -92,6 +94,7 @@
                     this.changedBySelect = false;
                     return
                 }
+
                 bus.$emit('change', this);
             }
         },
