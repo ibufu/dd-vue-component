@@ -1,3 +1,13 @@
+<a name="0.2.8"></a>
+## [0.2.8](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.7...v0.2.8) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** select cant clear ([20a2e19](http://test.eluying.com:91/frontend/dd-vue-component/commits/20a2e19))
+
+
+
 <a name="0.2.7"></a>
 ## [0.2.7](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.6...v0.2.7) (2016-10-10)
 
