@@ -94,7 +94,8 @@
                     this.changedBySelect = false;
                     return
                 }
-
+                
+                this.selectedOptions = [];
                 bus.$emit('change', this);
             }
         },
