@@ -36,6 +36,32 @@
             </dd-select>
         </div>
         <p>当前选中的value<span v-text="multipleValue"></span></p>
+        <h3>单选联动</h3>
+        <div style="width: 100px;">
+            <dd-select v-model="province">
+                <dd-option v-for="option in provinces" :value="option.value" :label="option.label">
+                </dd-option>
+            </dd-select>
+        </div>
+        <div style="width: 100px;">
+            <dd-select v-model="city">
+                <dd-option v-for="option in currentCities" :value="option.value" :label="option.label" :key="option.label+option.value">
+                </dd-option>
+            </dd-select>
+        </div>
+        <h3>多选联动</h3>
+        <div style="width: 100px;">
+            <dd-select v-model="province2">
+                <dd-option v-for="option in provinces" :value="option.value" :label="option.label">
+                </dd-option>
+            </dd-select>
+        </div>
+        <div style="width: 100px;">
+            <dd-select v-model="onCities" multiple>
+                <dd-option v-for="option in currentCities2" :value="option.value" :label="option.label" :key="option.label+option.value">
+                </dd-option>
+            </dd-select>
+        </div>
     </div>
 <script src="../dist/select.build.js"></script>    
 </body>

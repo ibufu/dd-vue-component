@@ -69,6 +69,7 @@
                 selectedLabel: '',
                 selectedOptions: [],
                 changedBySelect: false,
+                selectedOption: {},
             }
         },
 
@@ -98,7 +99,12 @@
         computed: {
             selectedValue() {
                 return this.selectedOptions.map(el => el.value);
+            },
+
+            selectedLabel() {
+                return this.multiple ? this.selectedOptions.map(el => el.label).join('、') : this.selectedOption.label;
             }
+
         },
 
         methods: {
@@ -116,32 +122,58 @@
             handleSelect(option) {
                 // every select will trigger in bus pattern
                 const isChild = this.$children.some(el => el === option);
-                this.changedBySelect = true;
                 if (!isChild) {
                     return
                 }
-                    
+
+                this.changedBySelect = true;
                 if (this.multiple) {
                     if (this.selectedValue.indexOf(option.value) > -1) {
                         this.selectedOptions = this.selectedOptions.filter(el => el.value !== option.value);
-                        option.current = false;
+                        //option.current = false;
                     } else {
                         this.selectedOptions.push({ value: option.value, label: option.label });
-                        option.current = true;
+                        //option.current = true;
                     }
 
                     this.selectedLabel = this.selectedOptions.map(el => el.label).join('、');
                     this.$emit('input', this.selectedValue);
                 } else {
-                    this.selectedLabel = option.label;
+                    this.selectedOption = { value: option.value, label: option.label };
                     this.$emit('input', option.value);
                     this.hideMenu();
                 }
+            },
+
+            selectMultiple(option) {
+                const isChild = this.$children.some(el => el === option);
+                if (!isChild) {
+                    return
+                }
+
+                if (!this.selectedOptions.some(el => {
+                    return el.value === option.value && el.label === option.label
+                })) {
+                    this.selectedOptions.push({ value: option.value, label: option.label });
+                }
+            },
+
+            optionDestroy(option) {
+                const isChild = this.$children.some(el => el === option);
+                if (!isChild) {
+                    return
+                }
+
+                this.selectedOptions = this.selectedOptions.filter(el => {
+                    return el.value !== option.value || el.label !== option.label
+                });
             }
         },
 
         mounted() {
+            bus.$on('optionDestroy', this.optionDestroy);
             bus.$on('select', this.handleSelect);
+            bus.$on('selectMultiple', this.selectMultiple);
             if (this.value) {
                 bus.$emit('change', this);
             }

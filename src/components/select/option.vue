@@ -38,15 +38,15 @@
             }
         },
 
+        computed: {
+            current() {
+                return this.selected || (this.multiple ? this.$parent.value.indexOf(this.value) > -1 : this.$parent.value === this.value);
+            }
+        },
+
         methods: {
             handleClick() {
                 bus.$emit('select', this);
-            },
-
-            handleSelect(option) {
-                if (!this.multiple) {
-                    this.current = this === option;
-                }
             },
 
             handleChange(select) {
@@ -57,7 +57,7 @@
 
                 if (this.multiple) {
                     if (select.value.some(value => value === this.value)) {
-                        bus.$emit('select', this);
+                        bus.$emit('selectMultiple', this);
                     }
                 } else {
                     if (this.value === select.value) {
@@ -68,8 +68,21 @@
         },
 
         created() {
-            bus.$on('select', this.handleSelect);
+            if (this.current && !this.multiple) {
+                bus.$emit('select', this);
+            }
+
+            if (this.current && this.multiple) {
+                bus.$emit('selectMultiple', this);
+            }
+
             bus.$on('change', this.handleChange);
+        },
+
+        beforeDestroy() {
+            if (this.multiple) {
+                bus.$emit('optionDestroy', this);
+            }
         }
 
     }

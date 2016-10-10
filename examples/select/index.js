@@ -30,12 +30,37 @@ new Vue ({
                 value: 'female',
                 label: '女'
             }],
-            value: null,
-            multipleValue: ['0']
+            value: '0',
+            multipleValue: ['0'],
+            provinces: [{label:'浙江省', value: '0'}, {label: '河南省', value: '1'}],
+            cities: [[{label:'杭州', value: '0'}, {label: '温州', value: '1'}], [{label:'郑州', value: '0'}, {label: '开封', value: '1'}]],
+            province: '0',
+            currentCities: [],
+            city: '0',
+            onCities: ['0'],
+            province2: '0'
         }
     },
     methods: {
+        
+    },
+    computed: {
+        currentCities() {
+            return this.cities[this.province];
+        },
+        currentCities2() {
+            return this.cities[this.province2];
+        }
+    },
+    watch: {
+        province() {
+            this.city = '0';
+        },
 
+        province2() {
+            this.onCities = ['0'];
+            console.log();
+        }
     },
     components: {
         DdSelect,
