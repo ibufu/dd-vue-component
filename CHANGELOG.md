@@ -1,3 +1,13 @@
+<a name="0.2.11"></a>
+## [0.2.11](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.10...v0.2.11) (2016-10-11)
+
+
+### Features
+
+* **select:** option emit click event ([ef0a11a](http://test.eluying.com:91/frontend/dd-vue-component/commits/ef0a11a))
+
+
+
 <a name="0.2.10"></a>
 ## [0.2.10](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.9...v0.2.10) (2016-10-10)
 
