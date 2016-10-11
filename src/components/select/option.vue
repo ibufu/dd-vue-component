@@ -47,6 +47,7 @@
         methods: {
             handleClick() {
                 bus.$emit('select', this);
+                this.$emit('click', this);
             },
 
             handleChange(select) {
