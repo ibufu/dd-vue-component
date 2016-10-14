@@ -19,9 +19,8 @@
 </style>
 <script>
     export default{
-        data(){
-            return{
-            }
+        created() {
+            this.bus = this.$parent.bus;
         }
     }
 </script>

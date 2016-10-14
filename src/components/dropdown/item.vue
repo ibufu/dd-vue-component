@@ -20,16 +20,14 @@
     }
 </style>
 <script>
-    import bus from './bus';
     export default{
-        data(){
-            return{
-            }
+        created() {
+            this.bus = this.$parent.bus;
         },
-
+        
         methods: {
             handleClick() {
-                bus.$emit('click-item');
+                this.bus.$emit('click-item');
             }
         }
     }

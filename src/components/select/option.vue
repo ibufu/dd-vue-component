@@ -20,7 +20,6 @@
     }
 </style>
 <script>
-    import bus from './bus.js'
     export default {
         props: {
             value: [String, Number],
@@ -46,41 +45,37 @@
 
         methods: {
             handleClick() {
-                bus.$emit('select', this);
+                this.bus.$emit('select', this);
                 this.$emit('click', this);
             },
 
             handleChange(select) {
-                const isParent = this.$parent === select;
-                if (!isParent) {
-                    return
-                }
-
                 if (this.multiple) {
-                    bus.$emit('selectMultiple', this);
+                    this.bus.$emit('selectMultiple', this);
                 } else {
                     if (this.value === select.value) {
-                        bus.$emit('select', this);
+                        this.bus.$emit('select', this);
                     }
                 }
             }
         },
 
         created() {
+            this.bus = this.$parent.bus;
             if (this.current && !this.multiple) {
-                bus.$emit('select', this);
+                this.bus.$emit('select', this);
             }
 
             if (this.current && this.multiple) {
-                bus.$emit('selectMultiple', this);
+                this.bus.$emit('selectMultiple', this);
             }
 
-            bus.$on('change', this.handleChange);
+            this.bus.$on('change', this.handleChange);
         },
 
         beforeDestroy() {
             if (this.multiple) {
-                bus.$emit('optionDestroy', this);
+                this.bus.$emit('optionDestroy', this);
             }
         }
 
