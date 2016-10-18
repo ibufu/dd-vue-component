@@ -59,7 +59,7 @@
 </style>
 <script>
     import Clickoutside from '../../utils/clickoutside'
-    import bus from './bus.js';
+    import Vue from 'vue';
     export default {
         directives: {
             Clickoutside
@@ -96,7 +96,7 @@
                 }
                 
                 this.selectedOptions = [];
-                bus.$emit('change', this);
+                this.bus.$emit('change', this);
             }
         },
 
@@ -124,12 +124,6 @@
             },
 
             handleSelect(option) {
-                // every select will trigger in bus pattern
-                const isChild = this.$children.some(el => el === option);
-                if (!isChild) {
-                    return
-                }
-
                 this.changedBySelect = true;
                 if (this.multiple) {
                     if (this.selectedValue.indexOf(option.value) > -1) {
@@ -150,11 +144,6 @@
             },
 
             selectMultiple(option) {
-                const isChild = this.$children.some(el => el === option);
-                if (!isChild) {
-                    return
-                }
-
                 if (option.current) {
                     this.selectedOptions.push({ value: option.value, label: option.label });
                 } else {
@@ -163,23 +152,19 @@
             },
 
             optionDestroy(option) {
-                const isChild = this.$children.some(el => el === option);
-                if (!isChild) {
-                    return
-                }
-
                 this.selectedOptions = this.selectedOptions.filter(el => {
                     return el.value !== option.value || el.label !== option.label
                 });
             }
         },
 
-        mounted() {
-            bus.$on('optionDestroy', this.optionDestroy);
-            bus.$on('select', this.handleSelect);
-            bus.$on('selectMultiple', this.selectMultiple);
+        created() {
+            this.bus = new Vue();
+            this.bus.$on('optionDestroy', this.optionDestroy);
+            this.bus.$on('select', this.handleSelect);
+            this.bus.$on('selectMultiple', this.selectMultiple);
             if (this.value) {
-                bus.$emit('change', this);
+                this.bus.$emit('change', this);
             }
         }
     }

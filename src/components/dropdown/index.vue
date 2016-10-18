@@ -25,8 +25,7 @@
 <script>
     import DdMenu from './menu.vue';
     import Clickoutside from '../../utils/clickoutside';
-    import bus from './bus';
-
+    import Vue from 'vue';
     export default{
         props: {
             text: {
@@ -51,8 +50,9 @@
             }
         },
 
-        mounted() {
-            bus.$on('click-item', this.hide)
+        created() {
+            this.bus = new Vue();
+            this.bus.$on('click-item', this.hide)
         },
 
         components: {
