@@ -1,3 +1,13 @@
+<a name="0.2.12"></a>
+## [0.2.12](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.11...v0.2.12) (2016-10-18)
+
+
+### Bug Fixes
+
+* **select, dropdown:** creat bus when Vue init instead of bus.js ([d7b8ac1](http://test.eluying.com:91/frontend/dd-vue-component/commits/d7b8ac1))
+
+
+
 <a name="0.2.11"></a>
 ## [0.2.11](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.10...v0.2.11) (2016-10-11)
 
