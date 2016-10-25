@@ -13,6 +13,9 @@ new Vue ({
         },
         changeValueAgain() {
             this.value = new Date('2016-01-03');
+        },
+        disabledDate(date) {
+            return date && date.valueOf() > Date.now();
         }
     },
     components: {
