@@ -1,3 +1,18 @@
+<a name="0.3.0"></a>
+# [0.3.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.12...v0.3.0) (2016-10-25)
+
+
+### Bug Fixes
+
+* **pagination:** fix the logic of special state ([5065d3d](http://test.eluying.com:91/frontend/dd-vue-component/commits/5065d3d))
+
+
+### Features
+
+* **datepicker:** could set disabled date ([f434c88](http://test.eluying.com:91/frontend/dd-vue-component/commits/f434c88))
+
+
+
 <a name="0.2.12"></a>
 ## [0.2.12](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.11...v0.2.12) (2016-10-18)
 
