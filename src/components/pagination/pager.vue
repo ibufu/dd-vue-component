@@ -85,10 +85,10 @@
                 let showPrevMore = false;
                 let showNextMore = false;
                 if (pageCount > pagerCount) {
-                    if (currentPage > pagerCount - 1) {
+                    if (currentPage >= pagerCount - 1) {
                         showPrevMore = true;
                     }
-                    if (currentPage < pageCount - 1) {
+                    if (currentPage < pageCount - 2) {
                         showNextMore = true;
                     }
                 }
