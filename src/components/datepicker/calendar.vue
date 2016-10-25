@@ -79,6 +79,7 @@
             background-image: url('images/right-arrow.png');
         }
     }
+
     .dd-datepicker-table {
         table-layout: fixed;
         width: 231px;
@@ -117,8 +118,17 @@
                 background: $blue;
                 color: #fff;
             }
+            .dd-datepicker-cell-disabled {
+                color: $gary;
+                background: $gary-ban;
+                cursor: $cursor-disabled;
+                &:hover {
+                    background: $gary-ban;
+                }
+            }
         }
     }
+
 </style>
 <script>
 import { getRows, isSameDate } from './utils';
@@ -126,7 +136,8 @@ export default {
     name: 'calendar',
 
     props: {
-        defaultValue: [String, Date]
+        defaultValue: [String, Date],
+        disabledDate: Function
     },
 
     data() {
@@ -147,6 +158,9 @@ export default {
 
     methods: {
         selectDate(day) {
+            if (typeof this.disabledDate === 'function' && this.disabledDate(day)) {
+                return false;
+            }
             this.date = day;
             // select这个事件是用来关闭日历的，因为用户有可能通过输入框更改时间
             this.$emit('select');
@@ -188,6 +202,10 @@ export default {
 
             if (isSameDate(cell, this.date)) {
                 classes.push('dd-datepicker-current');
+            }
+
+            if (typeof this.disabledDate === 'function' && this.disabledDate(cell)) {
+                classes.push('dd-datepicker-cell-disabled')
             }
 
             return classes.join(' ');

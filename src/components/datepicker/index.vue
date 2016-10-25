@@ -11,7 +11,7 @@
                 v-model="dateStr" />
             <i @click="handleClickCalendarIcon" class="dd-datepicker-calendar-icon" :class="{disabled: disabled}"></i>
         </span>
-        <calendar v-show="calendarVisible" v-on:select="handleSelect" v-on:changeDate="handleChangeDate" :default-value="value" />
+        <calendar v-show="calendarVisible" v-on:select="handleSelect" v-on:changeDate="handleChangeDate" :default-value="value" :disabled-date="disabledDate"/>
     </span>
 </template>
 <style lang="sass">
