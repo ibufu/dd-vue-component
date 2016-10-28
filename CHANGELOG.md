@@ -1,3 +1,88 @@
+<a name="0.3.1"></a>
+## [0.3.1](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.3.0...v0.3.1) (2016-10-28)
+
+
+### Bug Fixes
+
+* **select:** mutiple select bug ([f041bd2](http://test.eluying.com:91/frontend/dd-vue-component/commits/f041bd2))
+
+
+
+<a name="0.3.0"></a>
+# [0.3.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.12...v0.3.0) (2016-10-25)
+
+
+### Bug Fixes
+
+* **pagination:** fix the logic of special state ([5065d3d](http://test.eluying.com:91/frontend/dd-vue-component/commits/5065d3d))
+
+
+### Features
+
+* **datepicker:** could set disabled date ([f434c88](http://test.eluying.com:91/frontend/dd-vue-component/commits/f434c88))
+
+
+
+<a name="0.2.12"></a>
+## [0.2.12](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.11...v0.2.12) (2016-10-18)
+
+
+### Bug Fixes
+
+* **select, dropdown:** creat bus when Vue init instead of bus.js ([d7b8ac1](http://test.eluying.com:91/frontend/dd-vue-component/commits/d7b8ac1))
+
+
+
+<a name="0.2.11"></a>
+## [0.2.11](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.10...v0.2.11) (2016-10-11)
+
+
+### Features
+
+* **select:** option emit click event ([ef0a11a](http://test.eluying.com:91/frontend/dd-vue-component/commits/ef0a11a))
+
+
+
+<a name="0.2.10"></a>
+## [0.2.10](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.9...v0.2.10) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** mutiple select bug ([faa0aa9](http://test.eluying.com:91/frontend/dd-vue-component/commits/faa0aa9))
+
+
+
+<a name="0.2.9"></a>
+## [0.2.9](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.8...v0.2.9) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** some style issues ([0de2a66](http://test.eluying.com:91/frontend/dd-vue-component/commits/0de2a66))
+
+
+
+<a name="0.2.8"></a>
+## [0.2.8](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.7...v0.2.8) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** select cant clear ([20a2e19](http://test.eluying.com:91/frontend/dd-vue-component/commits/20a2e19))
+
+
+
+<a name="0.2.7"></a>
+## [0.2.7](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.6...v0.2.7) (2016-10-10)
+
+
+### Bug Fixes
+
+* **select:** select does not select option when options change ([a6f5bb6](http://test.eluying.com:91/frontend/dd-vue-component/commits/a6f5bb6))
+
+
+
 <a name="0.2.6"></a>
 ## [0.2.6](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.5...v0.2.6) (2016-10-08)
 
