@@ -145,9 +145,9 @@
 
             selectMultiple(option) {
                 if (option.current) {
-                    if (!this.selectedOptions.some(el => el.value === option.value && el.label === option.label)) {
+
                         this.selectedOptions.push({ value: option.value, label: option.label });
-                    }
+
                 } else {
                     this.selectedOptions = this.selectedOptions.filter(el => el.value !== option.value);
                 }

@@ -77,6 +77,8 @@
             if (this.multiple) {
                 this.bus.$emit('optionDestroy', this);
             }
+
+            this.bus.$off('change', this.handleChange);
         }
 
     }
