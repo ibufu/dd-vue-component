@@ -1,3 +1,14 @@
+<a name="0.3.2"></a>
+## [0.3.2](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.3.1...v0.3.2) (2016-10-28)
+
+
+### Bug Fixes
+
+* **select:** mutiple select bug ([d3c6dd0](http://test.eluying.com:91/frontend/dd-vue-component/commits/d3c6dd0))
+* **select:** select bug ([53a77f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/53a77f4))
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.3.0...v0.3.1) (2016-10-28)
 
