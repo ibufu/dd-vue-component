@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-    import { DdDropdown, DdDropdownItem, DdPagination, DdDatepicker, DdSelect, DdOption } from 'dd-vue-component';
+    import { DdPagination } from 'dd-vue-component';
 
     export default {
         methods: {
@@ -13,12 +13,7 @@
             }
         },
             components: {
-                DdDropdown,
-                DdDropdownItem,
-                DdPagination,
-                DdDatepicker,
-                DdSelect,
-                DdOption
+                DdPagination
             }
     }
 </script>

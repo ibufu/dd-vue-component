@@ -60,7 +60,7 @@
     </div>
 </template>
 <script>
-    import { DdDropdown, DdDropdownItem, DdPagination, DdDatepicker, DdSelect, DdOption } from 'dd-vue-component';
+    import { DdSelect, DdOption } from 'dd-vue-component';
 
     export default {
         data() {
@@ -125,10 +125,6 @@
             }
         },
         components: {
-            DdDropdown,
-            DdDropdownItem,
-            DdPagination,
-            DdDatepicker,
             DdSelect,
             DdOption
         }
