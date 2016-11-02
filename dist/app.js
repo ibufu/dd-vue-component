@@ -5870,33 +5870,42 @@ module.exports = Vue$2;
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
+"use strict";
+'use strict';
+
 var DdDatepicker = __webpack_require__(43);
 var DdPagination = __webpack_require__(47);
 var DdSelect = __webpack_require__(49);
-var DdOption  = __webpack_require__(50);
+var DdOption = __webpack_require__(50);
 var DdDropdown = __webpack_require__(44);
 var DdDropdownItem = __webpack_require__(45);
 
 module.exports = {
-    DdDatepicker,
-    DdPagination,
-    DdSelect,
-    DdOption,
-    DdDropdown,
-    DdDropdownItem,
+    DdDatepicker: DdDatepicker,
+    DdPagination: DdPagination,
+    DdSelect: DdSelect,
+    DdOption: DdOption,
+    DdDropdown: DdDropdown,
+    DdDropdownItem: DdDropdownItem
 };
-
 
 /***/ },
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 "use strict";
-const nodeList = [];
-const ctx = '@@clickoutsideContext';
+'use strict';
 
-document.addEventListener('click', e => {
-  nodeList.forEach(node => node[ctx].documentHandler(e));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var nodeList = [];
+var ctx = '@@clickoutsideContext';
+
+document.addEventListener('click', function (e) {
+  nodeList.forEach(function (node) {
+    return node[ctx].documentHandler(e);
+  });
 });
 /**
  * v-clickoutside
@@ -5906,40 +5915,33 @@ document.addEventListener('click', e => {
  * <div v-element-clickoutside="handleClose">
  * ```
  */
-/* harmony default export */ exports["default"] = {
-  bind(el, binding, vnode) {
-    const id = nodeList.push(el) - 1;
-    const documentHandler = function(e) {
-      if (!vnode.context ||
-        el.contains(e.target) ||
-        (vnode.context.popperElm &&
-        vnode.context.popperElm.contains(e.target))) return;
+exports.default = {
+  bind: function bind(el, binding, vnode) {
+    var id = nodeList.push(el) - 1;
+    var documentHandler = function documentHandler(e) {
+      if (!vnode.context || el.contains(e.target) || vnode.context.popperElm && vnode.context.popperElm.contains(e.target)) return;
 
       if (binding.expression) {
-        el[ctx].methodName &&
-          vnode.context[el[ctx].methodName] &&
-          vnode.context[el[ctx].methodName]();
+        el[ctx].methodName && vnode.context[el[ctx].methodName] && vnode.context[el[ctx].methodName]();
       } else {
         el[ctx].bindingFn && el[ctx].bindingFn();
       }
     };
     el[ctx] = {
-      id,
-      documentHandler,
+      id: id,
+      documentHandler: documentHandler,
       methodName: binding.expression,
       bindingFn: binding.value
     };
   },
-
-  update(el, binding) {
+  update: function update(el, binding) {
     el[ctx].methodName = binding.expression;
     el[ctx].bindingFn = binding.value;
   },
+  unbind: function unbind(el) {
+    var len = nodeList.length;
 
-  unbind(el) {
-    let len = nodeList.length;
-
-    for (let i = 0; i < len; i++) {
+    for (var i = 0; i < len; i++) {
       if (nodeList[i][ctx].id === el[ctx].id) {
         nodeList.splice(i, 1);
         break;
@@ -5948,18 +5950,22 @@ document.addEventListener('click', e => {
   }
 };
 
-
 /***/ },
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 "use strict";
-/* harmony export (immutable) */ exports["getFirstDayOfMonth"] = getFirstDayOfMonth;
-/* harmony export (immutable) */ exports["getDayCountInMonth"] = getDayCountInMonth;
-/* harmony export (immutable) */ exports["getDayOfMonth"] = getDayOfMonth;
-/* harmony export (immutable) */ exports["getRows"] = getRows;
-/* harmony export (immutable) */ exports["formatDate"] = formatDate;
-/* harmony export (immutable) */ exports["isSameDate"] = isSameDate;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getFirstDayOfMonth = getFirstDayOfMonth;
+exports.getDayCountInMonth = getDayCountInMonth;
+exports.getDayOfMonth = getDayOfMonth;
+exports.getRows = getRows;
+exports.formatDate = formatDate;
+exports.isSameDate = isSameDate;
 /**
  * @param {Date} month
  * @returns {Date}
@@ -5975,7 +5981,7 @@ function getFirstDayOfMonth(month) {
  * @description 获取某个月的天数
  */
 function getDayCountInMonth(month) {
-    const resultDate = getFirstDayOfMonth(month);
+    var resultDate = getFirstDayOfMonth(month);
 
     resultDate.setMonth(resultDate.getMonth() + 1);
     resultDate.setDate(resultDate.getDate() - 1);
@@ -5989,10 +5995,10 @@ function getDayCountInMonth(month) {
  * @description 获取某个月的所有日期
  */
 function getDayOfMonth(month) {
-    const daysInMonth = getDayCountInMonth(month);
-    const days = [];
+    var daysInMonth = getDayCountInMonth(month);
+    var days = [];
 
-    for (let i = 1; i <= daysInMonth; i++) {
+    for (var i = 1; i <= daysInMonth; i++) {
         days.push(new Date(month.getFullYear(), month.getMonth(), i));
     }
 
@@ -6006,29 +6012,27 @@ function getDayOfMonth(month) {
  * @description calendar组件专用方法，返回需要渲染的月份的所有日期
  */
 function getRows(month) {
-    const rows = [];
-    let week = [];
+    var rows = [];
+    var week = [];
 
-    const days = getDayOfMonth(month);
+    var days = getDayOfMonth(month);
 
-    const addWeek = (item) => {
-        const emptyDays = 7 - week.length;
-        const prevMonthDayCount = rows.length
-            ? 0
-            : getDayCountInMonth(new Date(month.getFullYear(), month.getMonth() - 1, 1));
+    var addWeek = function addWeek(item) {
+        var emptyDays = 7 - week.length;
+        var prevMonthDayCount = rows.length ? 0 : getDayCountInMonth(new Date(month.getFullYear(), month.getMonth() - 1, 1));
 
-        for (let i = 0; i < emptyDays; ++i) {
+        for (var i = 0; i < emptyDays; ++i) {
             if (rows.length) {
                 item.push(new Date(month.getFullYear(), month.getMonth() + 1, i + 1));
             } else {
-                item.unshift(new Date(month.getFullYear(), month.getMonth() - 1, prevMonthDayCount - i))
+                item.unshift(new Date(month.getFullYear(), month.getMonth() - 1, prevMonthDayCount - i));
             }
         }
 
         rows.push(item);
     };
 
-    days.map((day) => {
+    days.map(function (day) {
         if (week.length > 0 && day.getDay() === 1) {
             addWeek(week);
             week = [];
@@ -6053,10 +6057,10 @@ function formatDate(date) {
     if (!(date instanceof Date)) {
         return date;
     }
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    return `${year}-${month < 10 ? '0' + month : month }-${day < 10 ? '0' + day : day}`;
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    return year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
 }
 
 /**
@@ -6068,7 +6072,6 @@ function formatDate(date) {
 function isSameDate(date1, date2) {
     return formatDate(date1) === formatDate(date2);
 }
-
 
 /***/ },
 /* 6 */
@@ -6442,6 +6445,45 @@ var _utils = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+console.log(_clickoutside2.default); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 exports.default = {
     name: 'DdDatePicker',
 
@@ -6534,44 +6576,7 @@ exports.default = {
     directives: {
         Clickoutside: _clickoutside2.default
     }
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+};
 
 /***/ },
 /* 10 */
