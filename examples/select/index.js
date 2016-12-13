@@ -44,6 +44,9 @@ new Vue ({
     methods: {
         clear() {
             this.multipleValue = [];
+        },
+        henan() {
+            this.province = '1';
         }
     },
     computed: {

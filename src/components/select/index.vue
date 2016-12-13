@@ -123,7 +123,7 @@
                 this.menuVisible = false;
             },
 
-            handleSelect(option) {
+            handleSelectByClick(option) {
                 this.changedBySelect = true;
                 if (this.multiple) {
                     if (this.selectedValue.indexOf(option.value) > -1) {
@@ -155,14 +155,20 @@
                 this.selectedOptions = this.selectedOptions.filter(el => {
                     return el.value !== option.value || el.label !== option.label
                 });
+            },
+
+            selectOne(option) {
+                this.selectedOption = { value: option.value, label: option.label };
+                this.hideMenu();
             }
         },
 
         created() {
             this.bus = new Vue();
             this.bus.$on('optionDestroy', this.optionDestroy);
-            this.bus.$on('select', this.handleSelect);
+            this.bus.$on('selectByClick', this.handleSelectByClick);
             this.bus.$on('selectMultiple', this.selectMultiple);
+            this.bus.$on('selectOne', this.selectOne);
             if (this.value) {
                 this.bus.$emit('change', this);
             }

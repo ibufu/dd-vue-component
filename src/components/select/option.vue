@@ -45,7 +45,7 @@
 
         methods: {
             handleClick() {
-                this.bus.$emit('select', this);
+                this.bus.$emit('selectByClick', this);
                 this.$emit('click', this);
             },
 
@@ -54,7 +54,7 @@
                     this.bus.$emit('selectMultiple', this);
                 } else {
                     if (this.value === select.value) {
-                        this.bus.$emit('select', this);
+                        this.bus.$emit('selectOne', this);
                     }
                 }
             }
@@ -63,7 +63,7 @@
         created() {
             this.bus = this.$parent.bus;
             if (this.current && !this.multiple) {
-                this.bus.$emit('select', this);
+                this.bus.$emit('selectOne', this);
             }
 
             if (this.current && this.multiple) {

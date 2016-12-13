@@ -27,24 +27,24 @@ module.exports = {
         loaders: [
             {
                 test: /\.vue$/,
-                loader: 'vue',
+                loader: 'vue-loader',
             },
 
             {
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /node_modules/
             },
 
             { 
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass'],
+                loaders: ['style-loader', 'css-loader', 'sass-loader'],
                 include: path.join(__dirname, 'src')
             },
 
             {
                 test: /\.css$/,
-                loaders: ['style', 'css']
+                loaders: ['style-loader', 'css-loader']
             },
 
             {
