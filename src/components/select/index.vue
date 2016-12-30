@@ -68,7 +68,6 @@
         data() {
             return {
                 menuVisible: false,
-                selectedLabel: '',
                 selectedOptions: [],
                 changedBySelect: false,
                 selectedOption: {},
@@ -134,7 +133,6 @@
                         //option.current = true;
                     }
 
-                    this.selectedLabel = this.selectedOptions.map(el => el.label).join('、');
                     this.$emit('input', this.selectedValue);
                 } else {
                     this.selectedOption = { value: option.value, label: option.label };
