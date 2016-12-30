@@ -1,3 +1,13 @@
+<a name="0.3.4"></a>
+## [0.3.4](https://test.eluying.com/frontend/dd-vue-component/compare/v0.3.3...v0.3.4) (2016-12-30)
+
+
+### Bug Fixes
+
+* remove redundant instance property ([1bbe297](https://test.eluying.com/frontend/dd-vue-component/commits/1bbe297))
+
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://test.eluying.com/frontend/dd-vue-component/compare/1f88fa7...v0.3.3) (2016-12-13)
 
