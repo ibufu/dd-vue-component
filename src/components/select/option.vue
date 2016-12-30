@@ -32,7 +32,6 @@
 
         data() {
             return {
-                current: this.selected,
                 multiple: this.$parent.multiple
             }
         },
