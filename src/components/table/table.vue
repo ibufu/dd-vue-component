@@ -10,7 +10,7 @@
         </thead>
         <tbody>
         <template v-for="row in dataSource">
-            <tr @click="expand(row)">
+            <tr v-if="!row.foot" @click="expand(row)">
                 <td v-for="col in columns">{{row[col.dataIndex]}}</td>
             </tr>
             <template v-if="row.expand">
@@ -20,6 +20,11 @@
             </template>
         </template>
         </tbody>
+        <tfoot v-if="foot">
+            <tr>
+                <td v-for="col in columns">{{foot[col.dataIndex]}}</td>
+            </tr>
+        </tfoot>
     </table>
 </template>
 <style>
@@ -39,6 +44,11 @@
         data() {
             return {
                
+            }
+        },
+        computed: {
+            foot() {
+                return this.dataSource.find(i => i.foot);
             }
         },
         methods: {

@@ -43,6 +43,7 @@ new Vue({
                 name: 'Joe',
                 age: 32,
                 address: 'Sidney',
+                foot: true
             }]
         }
     },
