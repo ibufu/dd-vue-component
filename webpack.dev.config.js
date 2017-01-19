@@ -10,7 +10,8 @@ module.exports = {
         'select': './examples/select',
         'pagination': './examples/pagination/index.js',
         'tree': './examples/tree',
-        'dropdown': './examples/dropdown'
+        'dropdown': './examples/dropdown',
+        'table': './examples/table'
     },
 
     output: {
