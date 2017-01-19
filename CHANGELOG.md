@@ -1,3 +1,15 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://test.eluying.com/frontend/dd-vue-component/compare/v0.3.4...v0.4.0) (2017-01-19)
+
+
+### Features
+
+* **table:** add new feat of table component ([0b6cec8](https://test.eluying.com/frontend/dd-vue-component/commits/0b6cec8))
+* **table:** add new feats of table ([b3f2186](https://test.eluying.com/frontend/dd-vue-component/commits/b3f2186))
+* **table:** modify table example ([e091b51](https://test.eluying.com/frontend/dd-vue-component/commits/e091b51))
+
+
+
 <a name="0.3.4"></a>
 ## [0.3.4](https://test.eluying.com/frontend/dd-vue-component/compare/v0.3.3...v0.3.4) (2016-12-30)
 
