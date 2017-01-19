@@ -4,6 +4,7 @@ var DdSelect = require('./components/select');
 var DdOption  = require('./components/select/option');
 var DdDropdown = require('./components/dropdown');
 var DdDropdownItem = require('./components/dropdown/item');
+var DdTable = require('./components/table');
 
 module.exports = {
     DdDatepicker,
@@ -12,4 +13,5 @@ module.exports = {
     DdOption,
     DdDropdown,
     DdDropdownItem,
+    DdTable
 };
