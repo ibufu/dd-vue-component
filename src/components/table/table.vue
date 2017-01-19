@@ -1,5 +1,5 @@
 <template>
-    <table>
+    <table class="dd-table" :class="{'dd-table-bordered': bordered, 'dd-table-small': size === 'small' }">
         <colgroup>
             <col v-for="col in columns" :width="col.width">
         </colgroup>
@@ -14,7 +14,7 @@
                 <td v-for="col in columns">{{row[col.dataIndex]}}</td>
             </tr>
             <template v-if="row.expand">
-                <tr v-for="child in row.children">
+                <tr class="dd-table-child" v-for="child in row.children">
                     <td v-for="col in columns">{{child[col.dataIndex]}}</td>
                 </tr>
             </template>
@@ -28,7 +28,13 @@
     export default{
         props: {
             columns: Array,
-            dataSource: Array
+            dataSource: Array,
+            bordered: {
+                type: Boolean,
+            },
+            size: {
+                type: String,
+            }
         },
         data() {
             return {

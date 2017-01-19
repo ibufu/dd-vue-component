@@ -1,10 +1,10 @@
 <template>
     <div style="position: relative">
         <div v-if="columnsFixed.length > 0" :style="{width: columnsFixedWidth+'px'}" style="position: absolute; top: 0;z-index: 1;overflow: hidden">
-            <table-body :columns="columnsFixed" :data-source="dataSource" />
+            <table-body :columns="columnsFixed" :data-source="dataSource" :bordered = "bordered" :size="size"/>
         </div>
         <div style="overflow: auto">
-            <table-body :columns="columns" :data-source="dataSource" />
+            <table-body :columns="columns" :data-source="dataSource" :bordered = "bordered" :size="size"/>
         </div>
     </div>
 </template>
@@ -16,16 +16,21 @@
         table-layout: fixed;
         width: 100%;
     }
-    td, th {
-        border: 1px solid #000;
-    }
 </style>
 <script>
     import tableBody from './table.vue';
     export default{
         props: {
             columns: Array,
-            dataSource: Array
+            dataSource: Array,
+            bordered: {
+                type: Boolean,
+                default: false
+            },
+            size: {
+                type: String,
+                default: 'default'
+            }
         },
         data() {
             return {
