@@ -1,3 +1,13 @@
+<a name="0.4.2"></a>
+## [0.4.2](https://test.eluying.com/frontend/dd-vue-component/compare/v0.4.1...v0.4.2) (2017-01-22)
+
+
+### Bug Fixes
+
+* **table:** add expandIcon and custom template ([90bf650](https://test.eluying.com/frontend/dd-vue-component/commits/90bf650))
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://test.eluying.com/frontend/dd-vue-component/compare/v0.4.0...v0.4.1) (2017-01-19)
 
