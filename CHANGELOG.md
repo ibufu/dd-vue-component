@@ -1,3 +1,13 @@
+<a name="0.4.1"></a>
+## [0.4.1](https://test.eluying.com/frontend/dd-vue-component/compare/v0.4.0...v0.4.1) (2017-01-19)
+
+
+### Bug Fixes
+
+* **table:** export ([42335f4](https://test.eluying.com/frontend/dd-vue-component/commits/42335f4))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://test.eluying.com/frontend/dd-vue-component/compare/v0.3.4...v0.4.0) (2017-01-19)
 
