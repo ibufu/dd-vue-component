@@ -11,14 +11,17 @@
   "author": "morning",
   "license": "MIT",
   "dependencies": {
-    "dd-common-css": "0.1.0",
+    "dd-common-css": "0.2.1",
     "vue": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "babel-core": "^6.14.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-loader": "^6.2.5",
+    "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-plugin-transform-vue-jsx": "^3.3.0",
     "babel-preset-latest": "^6.14.0",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.25.0",

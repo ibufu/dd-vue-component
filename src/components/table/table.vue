@@ -5,56 +5,47 @@
         </colgroup>
         <thead>
         <tr>
-            <th v-for="col in columns">{{col.title}}</th>
+            <th v-for="col in columns" :class="col.className">{{col.title}}</th>
         </tr>
         </thead>
         <tbody>
         <template v-for="row in dataSource">
-            <tr v-if="!row.foot" @click="expand(row)">
-                <td v-for="col in columns">{{row[col.dataIndex]}}</td>
-            </tr>
-            <template v-if="row.expand">
-                <tr class="dd-table-child" v-for="child in row.children">
-                    <td v-for="col in columns">{{child[col.dataIndex]}}</td>
-                </tr>
+            <row :indent="0" :needIndentSpaced="needIndentSpaced" v-if="!row.foot" :row="row" :columns="columns" />
+            <template v-if="row.expanded">
+                <row :indent="1" :needIndentSpaced="needIndentSpaced" v-for="child in row.children" class="dd-table-child" :row="child" :columns="columns" />
             </template>
         </template>
         </tbody>
         <tfoot v-if="foot">
-            <tr>
-                <td v-for="col in columns">{{foot[col.dataIndex]}}</td>
-            </tr>
+            <row :needIndentSpaced="needIndentSpaced" :row="foot" :columns="columns" />
         </tfoot>
     </table>
 </template>
 <style>
 </style>
 <script>
+    import row from './tableRow.vue';
     export default{
         props: {
             columns: Array,
             dataSource: Array,
             bordered: {
-                type: Boolean,
+                type: Boolean
             },
             size: {
                 type: String,
             }
         },
-        data() {
-            return {
-               
-            }
-        },
         computed: {
             foot() {
                 return this.dataSource.find(i => i.foot);
+            },
+            needIndentSpaced() {
+                return this.dataSource.some(i => i.children);
             }
         },
-        methods: {
-            expand(row) {
-                this.$set(row, 'expand', !row.expand);
-            }
+        components: {
+            row
         }
     }
 </script>
