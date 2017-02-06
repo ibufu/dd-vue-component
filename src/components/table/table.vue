@@ -1,5 +1,5 @@
 <template>
-    <table class="dd-table" :class="{'dd-table-bordered': bordered, 'dd-table-small': size === 'small' }">
+    <table class="dd-table" :class="{'dd-table-bordered': bordered, 'dd-table-striped': stripe, 'dd-table-small': size === 'small' }">
         <colgroup>
             <col v-for="col in columns" :width="col.width">
         </colgroup>
@@ -35,6 +35,9 @@
             columns: Array,
             dataSource: Array,
             bordered: {
+                type: Boolean,
+            },
+            stripe: {
                 type: Boolean,
             },
             size: {
