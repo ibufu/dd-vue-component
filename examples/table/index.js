@@ -12,19 +12,21 @@ new Vue({
                 {
                     title: 'Name',
                     dataIndex: 'name',
-                    key: 'name',
                     width: 100,
-                    fixed: true
+                    fixed: true,
+                    className: 'name'
                 }, {
                     title: 'Age',
                     dataIndex: 'age',
-                    key: 'age',
                     width: 100,
                 }, {
                     title: 'Address',
                     dataIndex: 'address',
-                    key: 'address',
                     width: 100,
+                }, {
+                    title: 'action',
+                    width: 100,
+                    render: (h, row) => (<span>{row.name}</span>)
                 }
             ],
             dataSource: [{
