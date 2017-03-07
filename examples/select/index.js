@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import DdSelect from '../../src/components/select';
 import DdOption from '../../src/components/select/option.vue';
+import DdOptionGroup from '../../src/components/select/option-group.vue';
 new Vue ({
     el: '.app',
     data() {
@@ -29,6 +30,36 @@ new Vue ({
             {
                 value: 'female',
                 label: '女'
+            }],
+            options3: [{
+                label: '私家车',
+                options: [{
+                    label: '大众',
+                    value: 'dazhong'
+                },
+                {
+                    label: '保时捷',
+                    value: 'baoshijie'
+                },
+                {
+                    label: '兰博基尼',
+                    value: 'lanbojini'
+                }]
+            },
+            {
+                label: '公用车',
+                options: [{
+                    label: '公交',
+                    value: 'bus'
+                },
+                {
+                    label: '出租车',
+                    value: 'taxi'
+                },
+                {
+                    label: '优步',
+                    value: 'uber'
+                }]
             }],
             value: '0',
             multipleValue: ['0', '1', '2', '3'],
@@ -69,6 +100,7 @@ new Vue ({
     },
     components: {
         DdSelect,
-        DdOption
+        DdOption,
+        DdOptionGroup
     }
 })
