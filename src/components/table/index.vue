@@ -47,6 +47,10 @@
                 type: String,
                 default: 'default'
             },
+            stripe: {
+                type: Boolean,
+                default: false
+            },
             onChange: Function
         },
         data() {
