@@ -1,10 +1,28 @@
 <template>
     <div style="position: relative">
         <div v-if="columnsFixed.length > 0" :style="{width: columnsFixedWidth+'px'}" style="position: absolute; top: 0;z-index: 1;overflow: hidden">
-            <table-body :columns="columnsFixed" :data-source="dataSource" :bordered = "bordered" :size="size" :stripe = "stripe" />
+            <table-body
+                :on-change="handleTableChange"
+                :columns="columnsFixed"
+                :data-source="dataSource"
+                :bordered = "bordered"
+                :stripe = "stripe"
+                :size="size"
+                :sort-field="sortField"
+                :sort-type="sortType"
+            />
         </div>
         <div style="overflow: auto">
-            <table-body :columns="columns" :data-source="dataSource" :bordered = "bordered" :size="size" :stripe = "stripe" />
+            <table-body
+                :on-change="handleTableChange"
+                :columns="columns"
+                :data-source="dataSource"
+                :bordered = "bordered"
+                :stripe = "stripe"
+                :size="size"
+                :sort-field="sortField"
+                :sort-type="sortType"
+            />
         </div>
     </div>
 </template>
@@ -34,11 +52,13 @@
             stripe: {
                 type: Boolean,
                 default: false
-            }
+            },
+            onChange: Function
         },
         data() {
             return {
-               
+                sortField: undefined,
+                sortType: undefined
             }
         },
         computed: {
@@ -60,6 +80,11 @@
         methods: {
             expand(row) {
                 this.$set(row, 'expand', !row.expand);
+            },
+            handleTableChange(data) {
+                this.sortField = data.sortField;
+                this.sortType = data.sortType;
+                this.onChange && this.onChange(data);
             }
         },
         components: {

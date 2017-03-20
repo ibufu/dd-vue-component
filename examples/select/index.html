@@ -15,6 +15,8 @@
         <p>当前选中的value<span v-text="value"></span></p>
         <div style="width: 200px; margin-bottom: 20px">
             <dd-select placeholder="请选择车型">
+                <dd-option v-for="option in options" :value="option.value" :label="option.label">
+                </dd-option>
                 <dd-option-group v-for="option in options3" :label="option.label">
                     <dd-option v-for="item in option.options" :value="item.value" :label="item.label">
                         <div style="display: flex;justify-content: space-between;">
