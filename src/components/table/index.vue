@@ -1,10 +1,10 @@
 <template>
     <div style="position: relative">
         <div v-if="columnsFixed.length > 0" :style="{width: columnsFixedWidth+'px'}" style="position: absolute; top: 0;z-index: 1;overflow: hidden">
-            <table-body :columns="columnsFixed" :data-source="dataSource" :bordered = "bordered" :size="size"/>
+            <table-body :columns="columnsFixed" :data-source="dataSource" :bordered = "bordered" :size="size" :stripe = "stripe" />
         </div>
         <div style="overflow: auto">
-            <table-body :columns="columns" :data-source="dataSource" :bordered = "bordered" :size="size"/>
+            <table-body :columns="columns" :data-source="dataSource" :bordered = "bordered" :size="size" :stripe = "stripe" />
         </div>
     </div>
 </template>
