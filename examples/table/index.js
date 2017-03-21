@@ -18,6 +18,7 @@ new Vue({
                 }, {
                     title: 'Age',
                     dataIndex: 'age',
+                    sorter: true,
                     width: 100,
                 }, {
                     title: 'Address',
@@ -52,6 +53,11 @@ new Vue({
                 address: 'Sidney',
                 foot: true
             }]
+        }
+    },
+    methods: {
+        handleTableChange(data) {
+            console.log(data);
         }
     },
     components: {

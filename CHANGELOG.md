@@ -1,3 +1,23 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://test.eluying.com/frontend/dd-vue-component/compare/v0.4.2...v0.5.0) (2017-03-21)
+
+
+### Bug Fixes
+
+* fixed table component stripe attribute ([032b6f4](https://test.eluying.com/frontend/dd-vue-component/commits/032b6f4))
+* **table:** remove some style ([4af9ac2](https://test.eluying.com/frontend/dd-vue-component/commits/4af9ac2))
+* **table:** shadow display ([d2521a8](https://test.eluying.com/frontend/dd-vue-component/commits/d2521a8))
+
+
+### Features
+
+* add new attribute of table stripe ([09c8f08](https://test.eluying.com/frontend/dd-vue-component/commits/09c8f08))
+* add new group feature of select component ([d7a14f4](https://test.eluying.com/frontend/dd-vue-component/commits/d7a14f4))
+* **table:** sort ([deaa5e9](https://test.eluying.com/frontend/dd-vue-component/commits/deaa5e9))
+* add style for select component ([50f6da9](https://test.eluying.com/frontend/dd-vue-component/commits/50f6da9))
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://test.eluying.com/frontend/dd-vue-component/compare/v0.4.1...v0.4.2) (2017-01-22)
 

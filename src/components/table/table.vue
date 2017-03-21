@@ -1,11 +1,16 @@
 <template>
-    <table class="dd-table" :class="{'dd-table-bordered': bordered, 'dd-table-small': size === 'small' }">
+    <table class="dd-table" :class="{'dd-table-bordered': bordered, 'dd-table-striped': stripe, 'dd-table-small': size === 'small' }">
         <colgroup>
             <col v-for="col in columns" :width="col.width">
         </colgroup>
         <thead>
         <tr>
-            <th v-for="col in columns" :class="col.className">{{col.title}}</th>
+            <th v-for="col in columns" :class="col.className">{{col.title}}
+                <span class="dd-table-sorter" v-if="col.sorter">
+                    <div class="dd-table-sort-up" :class="{sorted: col.dataIndex === sortField && sortType === 0}" @click="sort(col, 0)"></div>
+                    <div class="dd-table-sort-down" :class="{sorted: col.dataIndex === sortField && sortType === 1}" @click="sort(col, 1)"></div>
+                </span>
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -21,7 +26,36 @@
         </tfoot>
     </table>
 </template>
-<style>
+<style lang="sass" rel="stylesheet/scss">
+    @mixin sort($type) {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        cursor: pointer;
+        &.sorted {
+            @if $type == up {
+                border-bottom-color: #178ce6;
+            } @else {
+                border-top-color: #178ce6;
+            }
+        }
+    }
+    .dd-table-sorter {
+        margin-left: 4px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .dd-table-sort-up {
+        @include sort(up);
+        border-top: none;
+        border-bottom: 5px solid #ccc;
+        margin-bottom: 3px;
+    }
+    .dd-table-sort-down {
+        @include sort(down);
+        border-top: 5px solid #ccc;
+        border-bottom: none;
+    }
 </style>
 <script>
     import row from './tableRow.vue';
@@ -32,9 +66,15 @@
             bordered: {
                 type: Boolean
             },
+            stripe: {
+                type: Boolean,
+            },
             size: {
                 type: String,
-            }
+            },
+            sortField: String,
+            sortType: Number, // 0-正序, 1-倒序
+            onChange: Function
         },
         computed: {
             foot() {
@@ -46,6 +86,14 @@
         },
         components: {
             row
+        },
+        methods: {
+            sort(col, type) {
+                this.onChange && this.onChange({
+                    sortField: col.dataIndex,
+                    sortType: type
+                });
+            }
         }
     }
 </script>
