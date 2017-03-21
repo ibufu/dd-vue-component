@@ -17,14 +17,14 @@
             <dd-select placeholder="请选择车型">
                 <dd-option v-for="option in options" :value="option.value" :label="option.label">
                 </dd-option>
-                <dd-option-group v-for="option in options3" :label="option.label">
+                <dd-group-option v-for="option in options3" :label="option.label">
                     <dd-option v-for="item in option.options" :value="item.value" :label="item.label">
                         <div style="display: flex;justify-content: space-between;">
                             <span>{{ item.label }}</span>
                             <span>{{ item.value }}</span>
                         </div>
                     </dd-option>
-                </dd-option-group>
+                </dd-group-option>
             </dd-select>
         </div>
         <div style="width: 200px;">

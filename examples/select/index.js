@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import DdSelect from '../../src/components/select';
 import DdOption from '../../src/components/select/option.vue';
-import DdOptionGroup from '../../src/components/select/option-group.vue';
+import DdGroupOption from '../../src/components/select/option-group.vue';
 new Vue ({
     el: '.app',
     data() {
@@ -101,6 +101,6 @@ new Vue ({
     components: {
         DdSelect,
         DdOption,
-        DdOptionGroup
+        DdGroupOption
     }
 })
