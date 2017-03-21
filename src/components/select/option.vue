@@ -3,7 +3,9 @@
         :class="{'dd-select-option-selected': current}"
         @click="handleClick">
         <input type="checkbox" class="dd-checkbox" v-if="multiple" :checked="current">
-        {{label}}
+        <slot>
+            <span>{{ label }}</span>
+        </slot>
     </li>
 </template>
 <style lang="sass">
