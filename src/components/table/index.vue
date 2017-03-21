@@ -27,13 +27,6 @@
     </div>
 </template>
 <style>
-    table {
-        background: #fff;
-        border-collapse: collapse;
-        border-spacing: 0;
-        table-layout: fixed;
-        width: 100%;
-    }
     .dd-table-container {
         box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
         overflow: auto;
