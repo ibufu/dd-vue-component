@@ -12,7 +12,7 @@
                 :sort-type="sortType"
             />
         </div>
-        <div style="overflow: auto">
+        <div class="dd-table-container">
             <table-body
                 :on-change="handleTableChange"
                 :columns="columns"
@@ -33,6 +33,10 @@
         border-spacing: 0;
         table-layout: fixed;
         width: 100%;
+    }
+    .dd-table-container {
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+        overflow: auto;
     }
 </style>
 <script>
