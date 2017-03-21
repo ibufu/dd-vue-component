@@ -1,6 +1,6 @@
 {
   "name": "dd-vue-component",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "dingdanlaile vue components library",
   "main": "src/index.js",
   "scripts": {
