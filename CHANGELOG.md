@@ -1,3 +1,14 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://test.eluying.com/frontend/dd-vue-component/compare/v0.5.0...v0.5.1) (2017-03-22)
+
+
+### Bug Fixes
+
+* export groupOption component ([6723bc6](https://test.eluying.com/frontend/dd-vue-component/commits/6723bc6))
+* fix some bugs ([0faa214](https://test.eluying.com/frontend/dd-vue-component/commits/0faa214))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://test.eluying.com/frontend/dd-vue-component/compare/v0.4.2...v0.5.0) (2017-03-21)
 
