@@ -7,11 +7,12 @@
 <body>
     <div class="app" style="padding: 20px;">
         <div style="width: 200px;">
-            <dd-select v-model="value">
+            <dd-select v-model="value" placeholder="请选择房型">
                 <dd-option v-for="option in options" :value="option.value" :label="option.label">
                 </dd-option>
             </dd-select>
         </div>
+        <button @click="reset">reset</button>
         <p>当前选中的value<span v-text="value"></span></p>
         <div style="width: 200px; margin-bottom: 20px">
             <dd-select placeholder="请选择车型">
@@ -44,7 +45,7 @@
         <br>
         <br>
         <div style="width: 200px;">
-            <dd-select multiple v-model="multipleValue">
+            <dd-select multiple v-model="multipleValue" placeholder="请选择房型">
                 <dd-option v-for="option in options" :value="option.value" :label="option.label">
                 </dd-option>
             </dd-select>

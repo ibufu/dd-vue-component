@@ -78,6 +78,9 @@ new Vue ({
         },
         henan() {
             this.province = '1';
+        },
+        reset() {
+            this.value = undefined;
         }
     },
     computed: {

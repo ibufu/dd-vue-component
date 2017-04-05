@@ -88,14 +88,18 @@
         },
 
         watch: {
-            value(newVal, oldVal) {
+            value(newVal) {
                 if (this.changedBySelect) {
                     this.changedBySelect = false;
                     return
                 }
                 
                 this.selectedOptions = [];
-                this.bus.$emit('change', this);
+                if (newVal === undefined) {
+                    this.selectedOption = {};
+                } else {
+                    this.bus.$emit('change', this);
+                }
             }
         },
 
