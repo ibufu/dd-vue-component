@@ -17,7 +17,13 @@
         <template v-for="row in dataSource">
             <row :indent="0" :needIndentSpaced="needIndentSpaced" v-if="!row.foot" :row="row" :columns="columns" />
             <template v-if="row.expanded">
-                <row :indent="1" :needIndentSpaced="needIndentSpaced" v-for="child in row.children" class="dd-table-child" :row="child" :columns="columns" />
+                <row :indent="1"
+                     :needIndentSpaced="needIndentSpaced"
+                     v-for="child in row.children"
+                     :key="child"
+                     class="dd-table-child"
+                     :row="child"
+                     :columns="columns" />
             </template>
         </template>
         </tbody>
