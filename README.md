@@ -8,6 +8,7 @@ See: https://ibufu.github.io/dd-vue-component/
 * dropdown
 * pagination
 * select
+* table
 
 计划中的组件：
 * modal
