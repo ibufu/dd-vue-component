@@ -1,14 +1,17 @@
 # dd-vue-component
-Dingdanlaile's vue components.
-订单来了的公共组件库，基于 vue 2。
+Dingdanlaile's vue components, is based on Vue 2.
 See: https://ibufu.github.io/dd-vue-component/
 
-已完成的组件：
+## Status
+complete：
 * datepicker
 * dropdown
 * pagination
-* select
+* select select-group
 * table
 
-计划中的组件：
+design：
 * modal
+
+## License
+MIT.
