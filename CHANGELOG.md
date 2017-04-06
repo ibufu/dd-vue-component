@@ -1,42 +1,103 @@
-<a name="0.5.2"></a>
-## [0.5.2](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.5...v0.5.2) (2017-04-05)
+<a name="1.0.0"></a>
+# [1.0.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.5.2...v1.0.0) (2017-04-06)
 
 
 ### Bug Fixes
 
-* **select:** select bug ([53a77f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/53a77f4))
-* datepick dose not change v-model when user input '' ([b38a3f5](http://test.eluying.com:91/frontend/dd-vue-component/commits/b38a3f5))
-* **pagination:** fix the logic of special state ([5065d3d](http://test.eluying.com:91/frontend/dd-vue-component/commits/5065d3d))
-* **select:** mutiple select bug ([d3c6dd0](http://test.eluying.com:91/frontend/dd-vue-component/commits/d3c6dd0))
-* **select:** mutiple select bug ([faa0aa9](http://test.eluying.com:91/frontend/dd-vue-component/commits/faa0aa9))
-* **select:** mutiple select bug ([f041bd2](http://test.eluying.com:91/frontend/dd-vue-component/commits/f041bd2))
-* **select:** reset select value ([c7a0dfa](http://test.eluying.com:91/frontend/dd-vue-component/commits/c7a0dfa))
+* **datepicker:** reset date and emit input event once ([7e06bcc](http://test.eluying.com:91/frontend/dd-vue-component/commits/7e06bcc))
+* **select:** emit input event when reset ([8a6d0fd](http://test.eluying.com:91/frontend/dd-vue-component/commits/8a6d0fd))
+* **table:** row has not key ([01a0c17](http://test.eluying.com:91/frontend/dd-vue-component/commits/01a0c17))
+
+
+
+<a name="0.5.2"></a>
+## [0.5.2](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.4.2...v0.5.2) (2017-04-05)
+
+
+### Bug Fixes
+
 * export groupOption component ([6723bc6](http://test.eluying.com:91/frontend/dd-vue-component/commits/6723bc6))
 * fix some bugs ([0faa214](http://test.eluying.com:91/frontend/dd-vue-component/commits/0faa214))
 * fixed table component stripe attribute ([032b6f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/032b6f4))
-* remove redundant instance property ([1bbe297](http://test.eluying.com:91/frontend/dd-vue-component/commits/1bbe297))
-* **select:** select bug ([ca09612](http://test.eluying.com:91/frontend/dd-vue-component/commits/ca09612))
-* **select:** select cant clear ([20a2e19](http://test.eluying.com:91/frontend/dd-vue-component/commits/20a2e19))
-* **select:** select does not select option when options change ([a6f5bb6](http://test.eluying.com:91/frontend/dd-vue-component/commits/a6f5bb6))
-* **select:** some style issues ([0de2a66](http://test.eluying.com:91/frontend/dd-vue-component/commits/0de2a66))
-* **select, dropdown:** creat bus when Vue init instead of bus.js ([d7b8ac1](http://test.eluying.com:91/frontend/dd-vue-component/commits/d7b8ac1))
-* **table:** add expandIcon and custom template ([90bf650](http://test.eluying.com:91/frontend/dd-vue-component/commits/90bf650))
-* **table:** export ([42335f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/42335f4))
+* **select:** reset select value ([c7a0dfa](http://test.eluying.com:91/frontend/dd-vue-component/commits/c7a0dfa))
 * **table:** remove some style ([4af9ac2](http://test.eluying.com:91/frontend/dd-vue-component/commits/4af9ac2))
 * **table:** shadow display ([d2521a8](http://test.eluying.com:91/frontend/dd-vue-component/commits/d2521a8))
 
 
 ### Features
 
-* **datepicker:** could set disabled date ([f434c88](http://test.eluying.com:91/frontend/dd-vue-component/commits/f434c88))
-* **select:** option emit click event ([ef0a11a](http://test.eluying.com:91/frontend/dd-vue-component/commits/ef0a11a))
-* **table:** add new feat of table component ([0b6cec8](http://test.eluying.com:91/frontend/dd-vue-component/commits/0b6cec8))
-* **table:** add new feats of table ([b3f2186](http://test.eluying.com:91/frontend/dd-vue-component/commits/b3f2186))
-* **table:** modify table example ([e091b51](http://test.eluying.com:91/frontend/dd-vue-component/commits/e091b51))
 * add new attribute of table stripe ([09c8f08](http://test.eluying.com:91/frontend/dd-vue-component/commits/09c8f08))
 * add new group feature of select component ([d7a14f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/d7a14f4))
 * **table:** sort ([deaa5e9](http://test.eluying.com:91/frontend/dd-vue-component/commits/deaa5e9))
 * add style for select component ([50f6da9](http://test.eluying.com:91/frontend/dd-vue-component/commits/50f6da9))
+
+
+
+<a name="0.4.2"></a>
+## [0.4.2](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.4.1...v0.4.2) (2017-01-22)
+
+
+### Bug Fixes
+
+* **table:** add expandIcon and custom template ([90bf650](http://test.eluying.com:91/frontend/dd-vue-component/commits/90bf650))
+
+
+
+<a name="0.4.1"></a>
+## [0.4.1](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.4.0...v0.4.1) (2017-01-19)
+
+
+### Bug Fixes
+
+* **table:** export ([42335f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/42335f4))
+
+
+
+<a name="0.4.0"></a>
+# [0.4.0](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.3.4...v0.4.0) (2017-01-19)
+
+
+### Features
+
+* **table:** add new feat of table component ([0b6cec8](http://test.eluying.com:91/frontend/dd-vue-component/commits/0b6cec8))
+* **table:** add new feats of table ([b3f2186](http://test.eluying.com:91/frontend/dd-vue-component/commits/b3f2186))
+* **table:** modify table example ([e091b51](http://test.eluying.com:91/frontend/dd-vue-component/commits/e091b51))
+
+
+
+<a name="0.3.4"></a>
+## [0.3.4](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.3.3...v0.3.4) (2016-12-30)
+
+
+### Bug Fixes
+
+* remove redundant instance property ([1bbe297](http://test.eluying.com:91/frontend/dd-vue-component/commits/1bbe297))
+
+
+
+<a name="0.3.3"></a>
+## [0.3.3](http://test.eluying.com:91/frontend/dd-vue-component/compare/v0.2.5...v0.3.3) (2016-12-13)
+
+
+### Bug Fixes
+
+* **select, dropdown:** creat bus when Vue init instead of bus.js ([d7b8ac1](http://test.eluying.com:91/frontend/dd-vue-component/commits/d7b8ac1))
+* datepick dose not change v-model when user input '' ([b38a3f5](http://test.eluying.com:91/frontend/dd-vue-component/commits/b38a3f5))
+* **pagination:** fix the logic of special state ([5065d3d](http://test.eluying.com:91/frontend/dd-vue-component/commits/5065d3d))
+* **select:** mutiple select bug ([d3c6dd0](http://test.eluying.com:91/frontend/dd-vue-component/commits/d3c6dd0))
+* **select:** mutiple select bug ([f041bd2](http://test.eluying.com:91/frontend/dd-vue-component/commits/f041bd2))
+* **select:** mutiple select bug ([faa0aa9](http://test.eluying.com:91/frontend/dd-vue-component/commits/faa0aa9))
+* **select:** select bug ([53a77f4](http://test.eluying.com:91/frontend/dd-vue-component/commits/53a77f4))
+* **select:** select bug ([ca09612](http://test.eluying.com:91/frontend/dd-vue-component/commits/ca09612))
+* **select:** select cant clear ([20a2e19](http://test.eluying.com:91/frontend/dd-vue-component/commits/20a2e19))
+* **select:** select does not select option when options change ([a6f5bb6](http://test.eluying.com:91/frontend/dd-vue-component/commits/a6f5bb6))
+* **select:** some style issues ([0de2a66](http://test.eluying.com:91/frontend/dd-vue-component/commits/0de2a66))
+
+
+### Features
+
+* **datepicker:** could set disabled date ([f434c88](http://test.eluying.com:91/frontend/dd-vue-component/commits/f434c88))
+* **select:** option emit click event ([ef0a11a](http://test.eluying.com:91/frontend/dd-vue-component/commits/ef0a11a))
 
 
 
