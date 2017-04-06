@@ -62,7 +62,7 @@
         watch: {
             date(newVal) {
                 if (!this.changedByInput) {
-                    this.dateStr = newVal ? formatDate(newVal) : null;
+                    this.dateStr = newVal ? formatDate(newVal) : '';
                 }
 
                 this.$emit('input', this.dateStr);

@@ -7,8 +7,9 @@
 <body>
     <div class="app" style="padding: 20px">
         <div>
-            <date-picker placeholder="请输入日期" />
+            <date-picker placeholder="请输入日期" v-model="value2" @input="handleDateChange"/>
         </div>
+        <button class="dd-btn dd-btn-primary" @click="reset">reset</button>
         <br>
         <br>
         <h4>默认时间2016-01-01</h4>

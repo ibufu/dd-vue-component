@@ -218,13 +218,17 @@ export default {
 
     watch: {
         date(newVal) {
-            this.year = newVal.getFullYear();
-            this.month = newVal.getMonth();
+            const today = new Date();
+            this.year = newVal ? newVal.getFullYear() : today.getFullYear();
+            this.month = newVal ? newVal.getMonth() : today.getMonth();
             this.$emit('changeDate', this.date);
         },
 
-        defaultValue(newVal) {
-            this.date = newVal ? new Date(newVal) : new Date();
+        defaultValue(newVal, oldVal) {
+            // 由外部改变v-model
+            if (!isSameDate(this.date, new Date(newVal))) {
+                this.date = newVal ? new Date(newVal) : undefined;
+            }
         }
     },
 
