@@ -7,7 +7,7 @@
 <body>
     <div class="app" style="padding: 20px;">
         <div style="width: 200px;">
-            <dd-select v-model="value" placeholder="请选择房型">
+            <dd-select v-model="value" placeholder="请选择房型" @input="handleChange">
                 <dd-option v-for="option in options" :value="option.value" :label="option.label">
                 </dd-option>
             </dd-select>
@@ -45,7 +45,7 @@
         <br>
         <br>
         <div style="width: 200px;">
-            <dd-select multiple v-model="multipleValue" placeholder="请选择房型">
+            <dd-select multiple v-model="multipleValue" placeholder="请选择房型" @input="handleChange">
                 <dd-option v-for="option in options" :value="option.value" :label="option.label">
                 </dd-option>
             </dd-select>

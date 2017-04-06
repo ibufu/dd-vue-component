@@ -81,6 +81,9 @@ new Vue ({
         },
         reset() {
             this.value = undefined;
+        },
+        handleChange(val) {
+            console.log(val);
         }
     },
     computed: {

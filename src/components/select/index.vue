@@ -97,6 +97,7 @@
                 this.selectedOptions = [];
                 if (newVal === undefined) {
                     this.selectedOption = {};
+                    this.$emit('input', newVal);
                 } else {
                     this.bus.$emit('change', this);
                 }
