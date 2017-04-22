@@ -24,7 +24,7 @@
 <script>
     export default {
         props: {
-            value: [String, Number],
+            value: null,
             label: [String, Number],
             selected: {
                 type: Boolean,

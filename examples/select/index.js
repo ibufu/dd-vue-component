@@ -7,19 +7,19 @@ new Vue ({
     data() {
         return {
             options: [{
-                value: '0',
+                value: {value: 1},
                 label: '所有房型'
             },
             {
-                value: '1',
+                value: {value: 2},
                 label: '房间A'
             },
             {
-                value: '2',
+                value: {value: 3},
                 label: '房间B'
             },
             {
-                value: '3',
+                value: {value: 4},
                 label: '房间C'
             }
             ],
