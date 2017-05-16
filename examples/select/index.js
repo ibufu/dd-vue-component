@@ -6,6 +6,7 @@ new Vue ({
     el: '.app',
     data() {
         return {
+            car: undefined,
             options: [{
                 value: {value: 1},
                 label: '所有房型'
@@ -66,10 +67,10 @@ new Vue ({
             provinces: [{label:'浙江省', value: '0'}, {label: '河南省', value: '1'}],
             cities: [[{label:'杭州', value: '0'}, {label: '温州', value: '1'}], [{label:'郑州', value: '0'}, {label: '开封', value: '1'}]],
             province: '0',
-            currentCities: [],
             city: '0',
             onCities: ['0'],
-            province2: '0'
+            province2: '0',
+            sex: undefined
         }
     },
     methods: {
