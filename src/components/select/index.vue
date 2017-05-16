@@ -64,7 +64,6 @@
         directives: {
             Clickoutside
         },
-
         data() {
             return {
                 menuVisible: false,
@@ -160,7 +159,9 @@
                 this.hideMenu();
             }
         },
-
+        beforeCreate() {
+            this.name = 'dd-select';
+        },
         created() {
             this.bus = new Vue();
             this.bus.$on('optionDestroy', this.optionDestroy);

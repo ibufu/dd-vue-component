@@ -34,13 +34,13 @@
 
         data() {
             return {
-                multiple: this.$parent.multiple
+                multiple: this.parent.multiple
             }
         },
 
         computed: {
             current() {
-                return this.selected || (this.multiple ? this.$parent.value.indexOf(this.value) > -1 : this.$parent.value === this.value);
+                return this.selected || (this.multiple ? this.parent.value.indexOf(this.value) > -1 : this.parent.value === this.value);
             }
         },
 
@@ -61,8 +61,15 @@
             }
         },
 
+        beforeCreate() {
+            let parent = this.$parent;
+            while (parent.name !== 'dd-select') {
+                parent = parent.$parent;
+            }
+            this.parent = parent;
+        },
         created() {
-            this.bus = this.$parent.bus;
+            this.bus = this.parent.bus;
             if (this.current && !this.multiple) {
                 this.bus.$emit('selectOne', this);
             }

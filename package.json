@@ -11,7 +11,7 @@
   "author": "morning",
   "license": "MIT",
   "dependencies": {
-    "dd-common-css": "0.2.1",
+    "dd-common-css": "0.2.2",
     "vue": "^2.0.1"
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^2.0.6",
     "vue-loader": "^9.5.1",
-    "webpack": "^2.1.0-beta.25"
+    "webpack": "2.1.0-beta.25"
   },
   "config": {
     "commitizen": {
